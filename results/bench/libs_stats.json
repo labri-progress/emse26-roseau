@@ -1,0 +1,457 @@
+[
+  {
+    "name": "mockito-all-1.10.19",
+    "lines": 62051,
+    "apiTypes": 513,
+    "apiMethods": 2382,
+    "apiFields": 486
+  },
+  {
+    "name": "retrofit-2.11.0",
+    "lines": 6399,
+    "apiTypes": 39,
+    "apiMethods": 100,
+    "apiFields": 0
+  },
+  {
+    "name": "commons-codec-1.18.0",
+    "lines": 23362,
+    "apiTypes": 80,
+    "apiMethods": 555,
+    "apiFields": 67
+  },
+  {
+    "name": "log4j-1.2.17",
+    "lines": 43898,
+    "apiTypes": 199,
+    "apiMethods": 1528,
+    "apiFields": 324
+  },
+  {
+    "name": "assertj-core-3.27.3",
+    "lines": 160609,
+    "apiTypes": 783,
+    "apiMethods": 6928,
+    "apiFields": 271
+  },
+  {
+    "name": "junit-jupiter-5.11.4",
+    "lines": 20,
+    "apiTypes": 0,
+    "apiMethods": 0,
+    "apiFields": 0
+  },
+  {
+    "name": "testng-7.11.0",
+    "lines": 50297,
+    "apiTypes": 398,
+    "apiMethods": 2923,
+    "apiFields": 306
+  },
+  {
+    "name": "protobuf-java-4.29.3",
+    "lines": 140296,
+    "apiTypes": 378,
+    "apiMethods": 7383,
+    "apiFields": 668
+  },
+  {
+    "name": "validation-api-2.0.1.Final",
+    "lines": 7324,
+    "apiTypes": 137,
+    "apiMethods": 337,
+    "apiFields": 33
+  },
+  {
+    "name": "junit-4.13.2",
+    "lines": 19958,
+    "apiTypes": 209,
+    "apiMethods": 901,
+    "apiFields": 28
+  },
+  {
+    "name": "httpclient-4.5.14",
+    "lines": 59579,
+    "apiTypes": 378,
+    "apiMethods": 1714,
+    "apiFields": 271
+  },
+  {
+    "name": "okhttp-4.12.0",
+    "lines": 0,
+    "apiTypes": 0,
+    "apiMethods": 0,
+    "apiFields": 0
+  },
+  {
+    "name": "spring-core-6.2.3",
+    "lines": 131980,
+    "apiTypes": 650,
+    "apiMethods": 4080,
+    "apiFields": 687
+  },
+  {
+    "name": "spring-context-6.2.3",
+    "lines": 84073,
+    "apiTypes": 517,
+    "apiMethods": 2715,
+    "apiFields": 196
+  },
+  {
+    "name": "spring-web-6.2.3",
+    "lines": 122691,
+    "apiTypes": 655,
+    "apiMethods": 3926,
+    "apiFields": 399
+  },
+  {
+    "name": "maven-plugin-annotations-3.15.1",
+    "lines": 531,
+    "apiTypes": 7,
+    "apiMethods": 29,
+    "apiFields": 41
+  },
+  {
+    "name": "guava-33.4.0-jre",
+    "lines": 181958,
+    "apiTypes": 440,
+    "apiMethods": 4224,
+    "apiFields": 417
+  },
+  {
+    "name": "commons-logging-1.3.5",
+    "lines": 7360,
+    "apiTypes": 16,
+    "apiMethods": 230,
+    "apiFields": 48
+  },
+  {
+    "name": "h2-2.3.232",
+    "lines": 226900,
+    "apiTypes": 781,
+    "apiMethods": 8045,
+    "apiFields": 1810
+  },
+  {
+    "name": "lombok-1.18.36",
+    "lines": 71962,
+    "apiTypes": 435,
+    "apiMethods": 2051,
+    "apiFields": 288
+  },
+  {
+    "name": "json-20250107",
+    "lines": 10419,
+    "apiTypes": 27,
+    "apiMethods": 325,
+    "apiFields": 25
+  },
+  {
+    "name": "javax.annotation-api-1.3.2",
+    "lines": 1342,
+    "apiTypes": 15,
+    "apiMethods": 35,
+    "apiFields": 2
+  },
+  {
+    "name": "spring-boot-starter-3.4.2",
+    "lines": 0,
+    "apiTypes": 0,
+    "apiMethods": 0,
+    "apiFields": 0
+  },
+  {
+    "name": "javax.servlet-api-4.0.1",
+    "lines": 16523,
+    "apiTypes": 82,
+    "apiMethods": 593,
+    "apiFields": 88
+  },
+  {
+    "name": "hamcrest-library-3.0",
+    "lines": 14,
+    "apiTypes": 0,
+    "apiMethods": 0,
+    "apiFields": 0
+  },
+  {
+    "name": "jcl-over-slf4j-2.0.16",
+    "lines": 2295,
+    "apiTypes": 8,
+    "apiMethods": 126,
+    "apiFields": 33
+  },
+  {
+    "name": "log4j-slf4j-impl-2.24.3",
+    "lines": 1327,
+    "apiTypes": 10,
+    "apiMethods": 109,
+    "apiFields": 5
+  },
+  {
+    "name": "junit-jupiter-engine-5.11.4",
+    "lines": 9871,
+    "apiTypes": 47,
+    "apiMethods": 178,
+    "apiFields": 51
+  },
+  {
+    "name": "slf4j-simple-2.0.16",
+    "lines": 850,
+    "apiTypes": 4,
+    "apiMethods": 19,
+    "apiFields": 21
+  },
+  {
+    "name": "junit-jupiter-api-5.11.4",
+    "lines": 18677,
+    "apiTypes": 129,
+    "apiMethods": 578,
+    "apiFields": 79
+  },
+  {
+    "name": "jackson-core-2.18.2",
+    "lines": 59044,
+    "apiTypes": 153,
+    "apiMethods": 2270,
+    "apiFields": 661
+  },
+  {
+    "name": "spring-test-6.2.3",
+    "lines": 65502,
+    "apiTypes": 355,
+    "apiMethods": 2354,
+    "apiFields": 87
+  },
+  {
+    "name": "spring-boot-autoconfigure-3.4.2",
+    "lines": 82309,
+    "apiTypes": 799,
+    "apiMethods": 3397,
+    "apiFields": 146
+  },
+  {
+    "name": "servlet-api-2.5",
+    "lines": 9548,
+    "apiTypes": 40,
+    "apiMethods": 330,
+    "apiFields": 45
+  },
+  {
+    "name": "commons-beanutils-1.10.1",
+    "lines": 31382,
+    "apiTypes": 105,
+    "apiMethods": 649,
+    "apiFields": 57
+  },
+  {
+    "name": "javax.inject-1",
+    "lines": 607,
+    "apiTypes": 6,
+    "apiMethods": 2,
+    "apiFields": 0
+  },
+  {
+    "name": "spring-boot-configuration-processor-3.4.2",
+    "lines": 7464,
+    "apiTypes": 20,
+    "apiMethods": 190,
+    "apiFields": 4
+  },
+  {
+    "name": "logback-core-1.5.16",
+    "lines": 36208,
+    "apiTypes": 419,
+    "apiMethods": 1877,
+    "apiFields": 408
+  },
+  {
+    "name": "log4j-api-2.24.3",
+    "lines": 33522,
+    "apiTypes": 150,
+    "apiMethods": 1943,
+    "apiFields": 107
+  },
+  {
+    "name": "jackson-datatype-jsr310-2.18.2",
+    "lines": 5980,
+    "apiTypes": 54,
+    "apiMethods": 158,
+    "apiFields": 74
+  },
+  {
+    "name": "junit-jupiter-params-5.11.4",
+    "lines": 5602,
+    "apiTypes": 41,
+    "apiMethods": 104,
+    "apiFields": 13
+  },
+  {
+    "name": "slf4j-api-2.0.16",
+    "lines": 7097,
+    "apiTypes": 47,
+    "apiMethods": 550,
+    "apiFields": 31
+  },
+  {
+    "name": "org.osgi.core-6.0.0",
+    "lines": 26257,
+    "apiTypes": 109,
+    "apiMethods": 419,
+    "apiFields": 346
+  },
+  {
+    "name": "mockito-core-5.15.2",
+    "lines": 42026,
+    "apiTypes": 427,
+    "apiMethods": 1594,
+    "apiFields": 72
+  },
+  {
+    "name": "jackson-databind-2.18.2",
+    "lines": 133660,
+    "apiTypes": 604,
+    "apiMethods": 6420,
+    "apiFields": 1217
+  },
+  {
+    "name": "jaxb-api-2.3.1",
+    "lines": 19746,
+    "apiTypes": 91,
+    "apiMethods": 387,
+    "apiFields": 25
+  },
+  {
+    "name": "maven-plugin-api-3.9.9",
+    "lines": 4261,
+    "apiTypes": 26,
+    "apiMethods": 231,
+    "apiFields": 7
+  },
+  {
+    "name": "spring-boot-starter-web-3.4.2",
+    "lines": 0,
+    "apiTypes": 0,
+    "apiMethods": 0,
+    "apiFields": 0
+  },
+  {
+    "name": "fastjson-2.0.55",
+    "lines": 13394,
+    "apiTypes": 95,
+    "apiMethods": 709,
+    "apiFields": 198
+  },
+  {
+    "name": "commons-collections-3.2.2",
+    "lines": 64195,
+    "apiTypes": 311,
+    "apiMethods": 2437,
+    "apiFields": 214
+  },
+  {
+    "name": "commons-lang3-3.17.0",
+    "lines": 97613,
+    "apiTypes": 260,
+    "apiMethods": 3266,
+    "apiFields": 569
+  },
+  {
+    "name": "spring-webmvc-6.2.3",
+    "lines": 74961,
+    "apiTypes": 326,
+    "apiMethods": 2523,
+    "apiFields": 146
+  },
+  {
+    "name": "spring-boot-starter-test-3.4.2",
+    "lines": 0,
+    "apiTypes": 0,
+    "apiMethods": 0,
+    "apiFields": 0
+  },
+  {
+    "name": "joda-time-2.13.1",
+    "lines": 72336,
+    "apiTypes": 145,
+    "apiMethods": 2731,
+    "apiFields": 169
+  },
+  {
+    "name": "commons-io-2.18.0",
+    "lines": 56501,
+    "apiTypes": 283,
+    "apiMethods": 1969,
+    "apiFields": 150
+  },
+  {
+    "name": "jackson-annotations-2.18.2",
+    "lines": 5800,
+    "apiTypes": 70,
+    "apiMethods": 297,
+    "apiFields": 102
+  },
+  {
+    "name": "spring-beans-6.2.3",
+    "lines": 61918,
+    "apiTypes": 307,
+    "apiMethods": 2005,
+    "apiFields": 207
+  },
+  {
+    "name": "gson-2.12.1",
+    "lines": 18622,
+    "apiTypes": 76,
+    "apiMethods": 432,
+    "apiFields": 100
+  },
+  {
+    "name": "jsr305-3.0.2",
+    "lines": 839,
+    "apiTypes": 35,
+    "apiMethods": 18,
+    "apiFields": 4
+  },
+  {
+    "name": "hamcrest-all-1.3",
+    "lines": 8204,
+    "apiTypes": 88,
+    "apiMethods": 498,
+    "apiFields": 5
+  },
+  {
+    "name": "commons-lang-2.6",
+    "lines": 55472,
+    "apiTypes": 83,
+    "apiMethods": 1846,
+    "apiFields": 191
+  },
+  {
+    "name": "logback-classic-1.5.16",
+    "lines": 17355,
+    "apiTypes": 174,
+    "apiMethods": 795,
+    "apiFields": 140
+  },
+  {
+    "name": "annotations-26.0.2",
+    "lines": 1933,
+    "apiTypes": 59,
+    "apiMethods": 33,
+    "apiFields": 8
+  },
+  {
+    "name": "log4j-core-2.24.3",
+    "lines": 113123,
+    "apiTypes": 795,
+    "apiMethods": 4224,
+    "apiFields": 574
+  },
+  {
+    "name": "jdk-21-ga",
+    "lines": 4031099,
+    "apiTypes": 12976,
+    "apiMethods": 66894,
+    "apiFields": 23905
+  }
+]

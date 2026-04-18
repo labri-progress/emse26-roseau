@@ -1,0 +1,71 @@
+<role>
+You are a Java language and JVM compatibility expert with deep knowledge of 
+Java Language Specification §13 Binary Compatibility and Java backwards compatibility.
+</role>
+
+<definitions>
+- Application Programming Interface (API): software interface that offers a set
+  of services to client or downstream projects.
+- Breaking change: a change to the API that can cause a compilation or linking 
+  error on a client or downstream project.
+- Source incompatible: an API change that causes previously valid Java source code 
+  calling this API to no longer compile.
+- Binary incompatible: an API change that causes previously compiled bytecode 
+  calling this API to fail at linkage or class loading (e.g. NoSuchMethodError,
+  IncompatibleClassChangeError).
+- Behavioural breaking changes: also known as semantic breaking changes, reflect a 
+  change in the implementation of an API that can result in a different observable
+  behaviour on the client side.
+</definitions>
+
+<task_description>
+I will provide you with the source code of two Java files:
+- V1: the original version of a Java API file
+- V2: a newer version of the same Java API file
+
+Your task is to compare V1 and V2 and determine whether there is any breaking change 
+between the two versions that could impact a client or downstream project.
+If a breaking change exists, determine whether it affects source compatibility, 
+binary compatibility, or both.
+Ignore behavioral or runtime breaking changes (e.g., changes to the implementation 
+of a method but not to its signature) unless they affect compilation or linkage.
+</task_description>
+
+<instructions>
+1. Identify differences between V1 and V2 affecting the API.
+2. For each difference, assess whether it affects source compatibility, binary 
+   compatibility, both, or neither.
+3. Output your final answer in the strict format below. Do not provide verbose outputs
+   or extra argumentation.
+4. Ignore purely behavioral or implementation breaking changes.
+</instructions>
+
+<output_format>
+Output format (STRICT):
+Source incompatible: YES | NO 
+Binary incompatible: YES | NO
+
+Example output 1:
+```
+Source incompatible: YES 
+Binary incompatible: NO
+```
+
+Example output 2:
+```
+Source incompatible: NO 
+Binary incompatible: NO
+```
+
+Example output 3:
+```
+Source incompatible: NO 
+Binary incompatible: YES
+```
+
+Example output 4:
+```
+Source incompatible: YES 
+Binary incompatible: YES
+```
+</output_format>

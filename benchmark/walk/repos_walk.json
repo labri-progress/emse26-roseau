@@ -1,0 +1,26 @@
+[
+  {
+    "name": "guava",
+    "url": "https://github.com/google/guava",
+    "branch": "master",
+    "tag": "dc5915eb1072c61ff2c3c704af4ae36b25f97b6c",
+    "sources": ["guava/src", "src"],
+    "pomPath": ""
+  },
+  {
+    "name": "commons-lang",
+    "url": "https://github.com/apache/commons-lang",
+    "branch": "master",
+    "tag": "LANG_1_0_B1",
+    "sources": ["src/main/java", "src/java"],
+    "pomPath": ""
+  },
+  {
+    "name": "h2database",
+    "url": "https://github.com/h2database/h2database",
+    "branch": "master",
+    "tag": "version-1.4.177",
+    "sources": ["h2/src/main"],
+    "pomPath": ""
+  }
+]

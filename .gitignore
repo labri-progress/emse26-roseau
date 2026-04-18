@@ -1,0 +1,13 @@
+.idea/
+clones/
+jdk/
+libs/
+local_tests/
+output/
+target/
+walk_results/
+working_dir/
+*-dataset/**/*.jar
+*.iml
+*.env
+.vscode

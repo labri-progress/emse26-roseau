@@ -1,0 +1,8 @@
+{
+  "name": "guava",
+  "url": "https://github.com/google/guava",
+  "branch": "master",
+  "tag": "dc5915eb1072c61ff2c3c704af4ae36b25f97b6c",
+  "sources": ["guava/src", "src"],
+  "pomPath": ""
+}

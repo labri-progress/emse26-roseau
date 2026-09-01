@@ -1,0 +1,101 @@
+rank,orga,name,global_usages,license,categories,tags,last_stable_version,repository,usages,date,kept
+1,junit,junit,133864,EPL 1.0,['Testing Frameworks & Tools'],"['testing', 'junit', 'quality']",4.13.2,Central,19129,"Feb 13, 2021",True
+2,org.slf4j,slf4j-api,73694,MIT,['Logging Frameworks'],"['logging', 'api', 'slf4j']",2.0.16,Central,5317,"Aug 10, 2024",True
+3,org.jetbrains.kotlin,kotlin-stdlib,72220,Apache 2.0,['JVM Languages'],"['jvm', 'language', 'library', 'kotlin', 'jetbrains']",2.1.10,Central,7147,"Jan 27, 2025",False
+4,org.jetbrains.kotlin,kotlin-stdlib-common,40246,Apache 2.0,['JVM Languages'],"['jvm', 'language', 'library', 'kotlin', 'jetbrains']",2.1.10,Central,357,"Jan 27, 2025",False
+5,com.google.guava,guava,39969,Apache 2.0,['Core Utilities'],"['google', 'guava', 'osgi', 'bundle']",33.4.0-jre,Central,2439,"Dec 17, 2024",True
+6,org.scala-lang,scala-library,38068,Apache 2.0,['JVM Languages'],"['jvm', 'language', 'library', 'scala']",2.13.16,Central,1430,"Jan 10, 2025",False
+7,org.jetbrains.kotlin,kotlin-stdlib-jdk8,34726,Apache 2.0,['Language Runtime'],"['language', 'library', 'kotlin', 'jdk', 'runtime', 'jetbrains']",2.1.10,Central,70,"Jan 27, 2025",False
+8,org.mockito,mockito-core,33648,MIT,['Mocking'],"['quality', 'mock', 'mocking', 'testing', 'mockito']",5.15.2,Central,781,"Jan 02, 2025",True
+9,com.fasterxml.jackson.core,jackson-databind,32518,Apache 2.0,['JSON Libraries'],"['format', 'binding', 'json', 'serialization', 'jackson']",2.18.2,Central,2025,"Nov 28, 2024",True
+10,org.apache.commons,commons-lang3,31233,Apache 2.0,['Core Utilities'],"['apache', 'commons']",3.17.0,Central,2562,"Aug 29, 2024",True
+11,ch.qos.logback,logback-classic,29662,EPL 1.0,['Logging Frameworks'],"['logback', 'logging']",1.5.16,Central,795,"Jan 05, 2025",True
+12,commons-io,commons-io,29477,Apache 2.0,['I/O Utilities'],"['commons', 'io']",2.18.0,Central,1492,"Nov 19, 2024",True
+13,org.projectlombok,lombok,27441,MIT,['Code Generators'],"['lombok', 'codegen', 'code', 'generator']",1.18.36,Central,1325,"Nov 15, 2024",True
+14,com.google.code.gson,gson,25386,Apache 2.0,['JSON Libraries'],"['format', 'json', 'google', 'gson', 'serialization']",2.12.1,Central,438,"Jan 31, 2025",True
+15,com.android.support,appcompat-v7,21430,Apache 2.0,"['Android Platform', 'Android Packages']","['support', 'compatibility', 'aar', 'platform', 'mobile', 'android']",28.0.0,Google,3976,"Sep 21, 2018",False
+16,javax.servlet,javax.servlet-api,19729,CDDL,['Java Specifications'],"['standard', 'servlet', 'javax', 'api', 'specs']",4.0.1,Central,5370,"Apr 20, 2018",True
+17,log4j,log4j,19541,Apache 2.0,['Logging Frameworks'],"['logging', 'log4j', 'osgi', 'bundle']",1.2.17,Central,10123,"May 26, 2012",True
+18,org.clojure,clojure,19295,EPL 1.0,['JVM Languages'],"['clojure', 'jvm', 'language']",1.12.0,Central,280,"Sep 05, 2024",False
+19,org.assertj,assertj-core,19184,Apache 2.0,['Assertion Libraries'],"['assert', 'quality', 'testing', 'assertion', 'assertj', 'validation']",3.27.3,Central,982,"Jan 18, 2025",True
+20,org.scalatest,scalatest,18580,Apache 2.0,['Testing Frameworks & Tools'],"['quality', 'bundle', 'testing', 'scala', 'osgi']",3.2.19,Central,1324,"Jun 23, 2024",False
+21,org.slf4j,slf4j-reload4j,17942,MIT,['Logging Bridges'],"['logging', 'bridge', 'slf4j']",2.0.16,Central,106,"Aug 10, 2024",True
+22,org.junit.jupiter,junit-jupiter-api,17534,EPL 2.0,['Testing Frameworks & Tools'],"['quality', 'junit', 'testing', 'api']",5.11.4,Central,1285,"Dec 16, 2024",True
+23,org.junit.jupiter,junit-jupiter-engine,16803,EPL 2.0,['Testing Frameworks & Tools'],"['quality', 'junit', 'testing', 'engine']",5.11.4,Central,1301,"Dec 16, 2024",True
+24,org.slf4j,slf4j-simple,16216,MIT,['Logging Frameworks'],"['logging', 'slf4j']",2.0.16,Central,1089,"Aug 10, 2024",True
+25,com.fasterxml.jackson.core,jackson-core,15873,Apache 2.0,['JSON Libraries'],"['format', 'json', 'serialization', 'jackson']",2.18.2,Central,1099,"Nov 28, 2024",True
+26,org.springframework,spring-context,15576,Apache 2.0,['Dependency Injection'],"['context', 'spring', 'dependency-injection', 'ioc', 'framework']",6.2.3,Central,39,"Feb 13, 2025",True
+27,org.mockito,mockito-all,15513,MIT,['Mocking'],"['quality', 'mock', 'mocking', 'testing', 'mockito']",1.10.19,Central,6315,"Dec 31, 2014",True
+28,org.apache.httpcomponents,httpclient,15477,Apache 2.0,['HTTP Clients'],"['network', 'apache', 'client', 'http']",4.5.14,Central,2484,"Nov 30, 2022",True
+29,com.google.code.findbugs,jsr305,15349,Apache 2.0,['Defect Detection Metadata'],"['quality', 'defect', 'jsr', 'google', 'analysis', 'findbugs', 'metadata']",3.0.2,Central,9269,"Mar 31, 2017",True
+30,androidx.appcompat,appcompat,15087,Apache 2.0,"['Android Platform', 'Android Packages']","['compatibility', 'aar', 'platform', 'mobile', 'android']",1.7.0,Google,1218,"May 29, 2024",False
+31,com.fasterxml.jackson.core,jackson-annotations,14849,Apache 2.0,['Annotation Libraries'],"['json', 'annotations', 'jackson', 'metadata']",2.18.2,Central,1107,"Nov 28, 2024",True
+32,org.springframework.boot,spring-boot-starter-test,14466,Apache 2.0,['Testing Frameworks & Tools'],"['quality', 'spring', 'framework', 'testing', 'starter']",3.4.2,Central,421,"Jan 23, 2025",True
+33,commons-codec,commons-codec,14316,Apache 2.0,['Base64 Libraries'],"['base64', 'binary', 'encoding', 'codec', 'commons']",1.18.0,Central,740,"Jan 27, 2025",True
+34,org.springframework.boot,spring-boot-starter-web,14292,Apache 2.0,['Web Frameworks'],"['spring', 'framework', 'web', 'starter']",3.4.2,Central,720,"Jan 23, 2025",True
+35,commons-lang,commons-lang,13984,Apache 2.0,['Core Utilities'],['commons'],2.6,Central,9520,"Jan 16, 2011",True
+36,org.renjin,grDevices,13856,,[],['rlang'],0.9.2726,BeDataDriven,650,"Nov 04, 2024",False
+37,org.renjin,utils,13856,,[],['rlang'],0.9.2726,BeDataDriven,652,"Nov 24, 2022",False
+38,org.renjin,stats,13856,,[],"['stats', 'rlang']",0.9.2726,BeDataDriven,651,"Nov 04, 2024",False
+39,org.renjin,methods,13854,,[],"['method', 'rlang']",0.9.2726,BeDataDriven,648,"Nov 03, 2024",False
+40,org.renjin,graphics,13854,,[],"['graphics', 'rlang']",0.9.2726,BeDataDriven,650,"Dec 22, 2024",False
+41,org.renjin,datasets,13850,,[],"['dataset', 'rlang']",0.9.2726,BeDataDriven,646,"Nov 04, 2024",False
+42,org.renjin,tools,13792,,[],"['tools', 'rlang']",0.9.2726,BeDataDriven,647,"May 06, 2023",False
+43,org.renjin,stats4,13781,,[],"['stats', 'rlang']",0.9.2726,BeDataDriven,645,"Feb 13, 2021",False
+44,org.renjin,parallel,13780,,[],"['parallel', 'rlang']",0.9.2726,BeDataDriven,645,"Nov 04, 2024",False
+45,org.renjin,splines,13779,,[],['rlang'],0.9.2726,BeDataDriven,645,"Nov 04, 2024",False
+46,org.renjin,grid,13779,,[],"['grid', 'rlang']",0.9.2726,BeDataDriven,645,"Feb 13, 2021",False
+47,org.renjin,tcltk,13773,,[],['rlang'],0.9.2726,BeDataDriven,644,"Feb 14, 2021",False
+48,org.renjin,compiler,13765,,[],"['compiler', 'rlang']",0.9.2726,BeDataDriven,646,"Nov 04, 2024",False
+49,javax.servlet,servlet-api,13497,CDDL,['Java Specifications'],"['standard', 'servlet', 'javax', 'api', 'specs']",2.5,Central,8670,"Jul 17, 2006",True
+50,commons-logging,commons-logging,12819,Apache 2.0,['Logging Frameworks'],"['commons', 'logging']",1.3.5,Central,9,"Feb 08, 2025",True
+51,org.apache.logging.log4j,log4j-core,12214,Apache 2.0,['Logging Frameworks'],"['logging', 'log4j', 'apache']",2.24.3,Central,567,"Dec 13, 2024",True
+52,org.testng,testng,12026,Apache 2.0,['Testing Frameworks & Tools'],"['testing', 'testng', 'quality']",7.11.0,Central,21,"Feb 13, 2025",True
+53,com.squareup.okhttp3,okhttp,11773,Apache 2.0,['HTTP Clients'],"['http', 'client', 'network']",4.12.0,Central,1727,"Oct 17, 2023",True
+54,org.springframework.boot,spring-boot-configuration-processor,11060,Apache 2.0,['Annotation Processing Tools'],"['spring', 'annotation', 'config', 'processing', 'framework', 'processor', 'metadata']",3.4.2,Central,338,"Jan 23, 2025",True
+55,org.springframework,spring-test,10863,Apache 2.0,['Testing Frameworks & Tools'],"['quality', 'spring', 'framework', 'testing']",6.2.3,Central,21,"Feb 13, 2025",True
+56,org.junit.jupiter,junit-jupiter,10589,EPL 2.0,['Testing Frameworks & Tools'],"['testing', 'junit', 'quality']",5.11.4,Central,741,"Dec 16, 2024",True
+57,org.apache.logging.log4j,log4j-api,10026,Apache 2.0,['Logging Frameworks'],"['logging', 'log4j', 'apache', 'api']",2.24.3,Central,435,"Dec 13, 2024",True
+58,joda-time,joda-time,9960,Apache 2.0,['Date and Time Utilities'],"['joda', 'time', 'date', 'calendar']",2.13.1,Central,37,"Feb 03, 2025",True
+59,org.jetbrains.kotlin,kotlin-reflect,9955,Apache 2.0,['Reflection Libraries'],"['reflection', 'kotlin', 'jetbrains']",2.1.10,Central,316,"Jan 27, 2025",False
+60,org.slf4j,jcl-over-slf4j,9800,Apache 2.0,['Logging Bridges'],"['logging', 'bridge', 'slf4j']",2.0.16,Central,567,"Aug 10, 2024",True
+61,org.springframework,spring-web,9743,Apache 2.0,['Web Frameworks'],"['spring', 'framework', 'web']",6.2.3,Central,17,"Feb 13, 2025",True
+62,org.springframework.boot,spring-boot-starter,9526,Apache 2.0,['Application Servers'],"['application', 'server', 'spring', 'framework', 'starter', 'appserver']",3.4.2,Central,713,"Jan 23, 2025",True
+63,org.springframework.boot,spring-boot-autoconfigure,9480,Apache 2.0,['Configuration Libraries'],"['spring', 'config', 'framework', 'properties']",3.4.2,Central,661,"Jan 23, 2025",True
+64,com.h2database,h2,9257,EPL 1.0,['Embedded SQL Databases'],"['embedded', 'database', 'sql', 'data', 'h2database']",2.3.232,Central,484,"Aug 12, 2024",True
+65,org.scala-lang,scala3-library,9240,Apache 2.0,['JVM Languages'],"['jvm', 'language', 'library', 'scala']",3.6.3,Central,216,"Jan 16, 2025",False
+66,org.springframework,spring-core,9226,Apache 2.0,['Core Utilities'],"['spring', 'framework']",6.2.3,Central,49,"Feb 13, 2025",True
+67,org.jetbrains.kotlinx,kotlinx-coroutines-core,8823,Apache 2.0,['Concurrency Libraries'],"['concurrency', 'coroutines', 'multithreading', 'kotlin', 'parallel', 'jetbrains']",1.10.1,Central,382,"Dec 20, 2024",False
+68,org.jetbrains.kotlin,kotlin-stdlib-jdk7,8594,Apache 2.0,['Language Runtime'],"['language', 'library', 'kotlin', 'jdk', 'runtime', 'jetbrains']",2.1.10,Central,8,"Jan 27, 2025",False
+69,androidx.core,core-ktx,8583,Apache 2.0,['Android Packages'],"['android', 'extension', 'mobile', 'aar']",1.15.0,Google,498,"Oct 30, 2024",False
+70,org.apache.maven,maven-plugin-api,8332,Apache 2.0,['Build Models'],"['plugin', 'model', 'project', 'build', 'build-system', 'maven', 'apache', 'api']",3.9.9,Central,351,"Aug 17, 2024",True
+71,org.apache.logging.log4j,log4j-slf4j-impl,8229,Apache 2.0,['Logging Bridges'],"['logging', 'log4j', 'bridge', 'implementation', 'apache', 'slf4j']",2.24.3,Central,167,"Dec 13, 2024",True
+72,com.mysql,mysql-connector-j,8133,,['JDBC Drivers'],"['database', 'sql', 'jdbc', 'driver', 'connector', 'rdbms', 'mysql', 'connection']",9.6.0,Central,293,"Apr 18, 2023",True
+73,org.hamcrest,hamcrest-all,8129,BSD,['Testing Frameworks & Tools'],"['matching', 'hamcrest', 'testing', 'quality']",1.3,Central,7321,"Jul 09, 2012",True
+74,org.jetbrains,annotations,7967,Apache 2.0,['Defect Detection Metadata'],"['quality', 'defect', 'annotations', 'analysis', 'metadata', 'jetbrains']",26.0.2,Central,174,"Jan 22, 2025",True
+75,org.springframework,spring-beans,7909,Apache 2.0,['Dependency Injection'],"['beans', 'spring', 'dependency-injection', 'ioc', 'framework']",6.2.3,Central,31,"Feb 13, 2025",True
+76,javax.inject,javax.inject,7411,Apache 2.0,"['Dependency Injection', 'Java Specifications']","['standard', 'dependency-injection', 'ioc', 'javax', 'specs']",1,Central,7167,"Oct 13, 2009",True
+77,org.osgi,org.osgi.core,7333,Apache 2.0,['OSGi Utilities'],['osgi'],6.0.0,Central,1987,"Jul 30, 2014",True
+78,javax.annotation,javax.annotation-api,7285,CDDL,"['Annotation Libraries', 'Java Specifications']","['standard', 'javax', 'annotations', 'metadata', 'api', 'specs']",1.3.2,Central,5239,"Feb 21, 2018",True
+79,com.alibaba,fastjson,7149,Apache 2.0,['JSON Libraries'],"['format', 'json', 'serialization', 'alibaba']",2.0.55,Central,0,"Feb 14, 2025",True
+80,org.jetbrains.kotlinx,kotlinx-coroutines-core-jvm,7139,Apache 2.0,[],"['jvm', 'coroutines', 'kotlin', 'jetbrains']",1.10.1,Central,699,"Dec 20, 2024",False
+81,commons-collections,commons-collections,7139,Apache 2.0,['Collections'],"['commons', 'collections', 'structures', 'data']",3.2.2,Central,3274,"Nov 12, 2015",True
+82,javax.validation,validation-api,7123,Apache 2.0,"['Validation Libraries', 'Java Specifications']","['standard', 'javax', 'api', 'specs', 'validation']",2.0.1.Final,Central,3316,"Dec 19, 2017",True
+83,org.junit.jupiter,junit-jupiter-params,7004,EPL 2.0,['Testing Frameworks & Tools'],"['quality', 'junit', 'testing']",5.11.4,Central,585,"Dec 16, 2024",True
+84,com.fasterxml.jackson.datatype,jackson-datatype-jsr310,6995,Apache 2.0,['Date and Time Utilities'],"['bundle', 'json', 'jsr', 'calendar', 'date', 'jackson', 'datatype', 'time', 'osgi']",2.18.2,Central,862,"Nov 28, 2024",True
+85,org.hamcrest,hamcrest-library,6880,BSD 3-clause,['Testing Frameworks & Tools'],"['quality', 'hamcrest', 'testing', 'matching', 'library']",3.0,Central,103,"Aug 01, 2024",True
+86,com.google.android.material,material,6635,Apache 2.0,['Android Packages'],"['google', 'material', 'aar', 'mobile', 'android']",1.12.0,Google,702,"May 02, 2024",False
+87,javax.xml.bind,jaxb-api,6476,CDDL 1.1,"['XML Processing', 'Java Specifications']","['binding', 'standard', 'processing', 'javax', 'jaxb', 'xml', 'api', 'specs']",2.3.1,Central,3143,"Oct 02, 2018",True
+88,ch.qos.logback,logback-core,6315,EPL 1.0,['Logging Frameworks'],"['logback', 'logging']",1.5.16,Central,131,"Jan 05, 2025",True
+89,org.clojure,tools.nrepl,6261,EPL 1.0,['REPL Libraries'],"['shell', 'clojure', 'tools', 'repl', 'interactive', 'eval', 'cli']",0.2.13,Central,202,"Apr 03, 2017",False
+90,org.json,json,6257,Public,['JSON Libraries'],"['format', 'bundle', 'json', 'serialization', 'osgi']",20250107,Central,76,"Jan 08, 2025",True
+91,org.springframework,spring-webmvc,6188,Apache 2.0,['Web Frameworks'],"['spring', 'framework', 'web', 'mvc']",6.2.3,Central,13,"Feb 13, 2025",True
+92,commons-beanutils,commons-beanutils,6104,Apache 2.0,['Reflection Libraries'],"['commons', 'beans', 'reflection']",1.10.1,Central,9,"Feb 13, 2025",True
+93,com.google.protobuf,protobuf-java,6063,BSD 3-clause,['Object Serialization'],"['format', 'binary', 'data', 'google', 'protobuf', 'object', 'serialization', 'protocol']",4.29.3,Central,58,"Jan 09, 2025",True
+94,org.scala-js,scalajs-library,6043,Apache 2.0,['Language Runtime'],"['scalajs', 'language', 'library', 'scala', 'javascript', 'runtime']",1.18.2,Central,288,"Jan 22, 2025",False
+95,com.squareup.retrofit2,retrofit,5924,Apache 2.0,['HTTP Clients'],"['retrofit', 'http', 'client', 'network']",2.11.0,Central,394,"Mar 28, 2024",True
+96,org.apache.maven.plugin-tools,maven-plugin-annotations,5866,Apache 2.0,['Annotation Libraries'],"['plugin', 'tools', 'build', 'build-system', 'annotations', 'maven', 'apache', 'metadata']",3.15.1,Central,274,"Oct 25, 2024",True
+97,clojure-complete,clojure-complete,5847,EPL 1.0,[],['clojure'],0.2.5,Clojars,13,"Feb 04, 2018",False
+98,androidx.annotation,annotation,5817,Apache 2.0,['Annotation Libraries'],"['android', 'annotations', 'metadata']",1.9.1,Google,261,"Oct 30, 2024",False
+99,org.jetbrains.kotlin,kotlin-stdlib-js,5729,Apache 2.0,[],"['library', 'kotlin', 'javascript', 'jetbrains']",2.1.10,Central,576,"Jan 27, 2025",False
+100,org.jetbrains.kotlin,kotlin-android-extensions-runtime,5693,Apache 2.0,['Language Runtime'],"['language', 'kotlin', 'runtime', 'jetbrains', 'android', 'extension']",2.1.10,Central,1,"Jan 27, 2025",False

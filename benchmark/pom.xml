@@ -15,7 +15,7 @@
         <jmh.version>1.37</jmh.version>
         <uberjar.name>benchmarks</uberjar.name>
 
-        <roseau.version>0.6.0-SNAPSHOT</roseau.version>
+        <roseau.version>0.6.0</roseau.version>
         <japicmp.version>0.25.4</japicmp.version>
         <revapi-java.version>0.28.4</revapi-java.version>
     </properties>

@@ -1,11 +1,14 @@
 [project]
-name = "preliminary-analysis"
+name = "accuracy-analysis"
 version = "0.1.0"
-description = "Preliminary longitudinal analysis notebook."
+description = "RQ1 accuracy analysis notebook (Jezek and Roseau datasets)."
 requires-python = ">=3.13"
 # Versions pinned to the environment the paper's figures were produced with.
 dependencies = [
     "pandas==2.2.3",
+    "numpy==2.2.3",
+    "matplotlib==3.10.1",
+    "seaborn==0.13.2",
 ]
 
 [tool.uv]

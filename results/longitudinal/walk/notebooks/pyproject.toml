@@ -1,16 +1,16 @@
 [project]
-name = "notebooks"
+name = "longitudinal-analysis"
 version = "0.1.0"
+description = "RQ3 longitudinal analysis notebooks (commit-level walk of 29 Java libraries)."
 requires-python = ">=3.13"
+# Versions pinned to the environment the paper's figures were produced with.
 dependencies = [
-    "jinja2>=3.1.6",
-    "pandas>=2.2.3",
-    "pandas-stubs~=2.2.3",
-    "python-dateutil>=2.9.0.post0",
-    "seaborn>=0.13.2",
+    "pandas==2.2.3",
+    "numpy==2.2.3",
+    "matplotlib==3.10.1",
+    "seaborn==0.13.2",
+    "jinja2==3.1.6",
 ]
 
-[dependency-groups]
-dev = [
-    "ipykernel>=7.3.0",
-]
+[tool.uv]
+package = false

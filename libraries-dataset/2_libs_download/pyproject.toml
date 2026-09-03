@@ -1,0 +1,9 @@
+[project]
+name = "libs-download"
+version = "0.1.0"
+description = "Download library JARs and generate the benchmark configuration."
+requires-python = ">=3.13"
+dependencies = []
+
+[tool.uv]
+package = false

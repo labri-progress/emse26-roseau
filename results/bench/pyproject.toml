@@ -1,11 +1,14 @@
 [project]
-name = "bench"
+name = "performance-analysis"
 version = "0.1.0"
-description = "Add your description here"
-readme = "README.md"
+description = "RQ2 performance analysis notebook (JMH results)."
 requires-python = ">=3.13"
+# Versions pinned to the environment the paper's figures were produced with.
 dependencies = [
-    "ipykernel>=6.29.5",
-    "pandas>=2.2.3",
-    "seaborn>=0.13.2",
+    "pandas==2.2.3",
+    "matplotlib==3.10.1",
+    "seaborn==0.13.2",
 ]
+
+[tool.uv]
+package = false

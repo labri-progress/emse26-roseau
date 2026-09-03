@@ -27,4 +27,16 @@ This repository is organized as follows. Subdirectories contain specific instruc
 
 ## Requirements
 
-JDK 25, Maven 3.9+, and [uv](https://docs.astral.sh/uv/) for the notebooks (`uv sync && uv run jupyter lab` in each notebook directory).
+JDK 25 and Maven 3.9+ for the Java pipeline, and [uv](https://docs.astral.sh/uv/) for the Python notebooks and scripts.
+
+## Python environment
+
+All Python code (notebooks in [results](results/) and [benchmark/analysis](benchmark/analysis/), scripts in [libraries-dataset](libraries-dataset/)) lives in a single [uv workspace](https://docs.astral.sh/uv/concepts/projects/workspaces/) rooted at this directory. There is one `pyproject.toml` per component and a single `uv.lock` / `.venv` at the root, so every component resolves to the same dependency versions.
+
+```bash
+uv sync                       # create ./.venv with every component's dependencies (run once, from the repo root)
+uv run jupyter lab            # open the notebooks (works from the repo root or any component directory)
+uv run python parse_mvn_top_repo.py   # run a script (from its own directory)
+```
+
+Python 3.13 is pinned in `.python-version`; `uv` installs it automatically if missing. To add a dependency, edit the relevant component's `pyproject.toml` and re-run `uv sync`.

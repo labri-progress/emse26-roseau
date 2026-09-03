@@ -1,0 +1,25 @@
+# uv workspace root for all Python code in this replication package.
+# This directory is not a package itself; it only anchors the workspace so
+# that every member below shares ONE resolution, ONE uv.lock, and ONE .venv.
+# See the "Python environment" section of the top-level README.
+
+[tool.uv.workspace]
+members = [
+    "benchmark/analysis",
+    "results/bench",
+    "results/longitudinal/preliminary",
+    "results/longitudinal/walk/notebooks",
+    "libraries-dataset/1_libs_selection",
+    "libraries-dataset/2_libs_download",
+    "libraries-dataset/3_jdk_download",
+]
+
+# Shared notebook tooling: one Jupyter install for the whole workspace.
+[dependency-groups]
+dev = [
+    "jupyterlab>=4.2",
+    "ipykernel>=6.29",
+]
+
+[tool.ruff]
+target-version = "py313"

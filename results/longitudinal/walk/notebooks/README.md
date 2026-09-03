@@ -2,8 +2,10 @@
 
 Analyses of the commit-level walk of 29 Java libraries (186,946 commits).
 
+Environment is managed from the repo root (`uv sync` once). Then, from here:
+
 ```bash
-uv sync && uv run jupyter lab
+uv run jupyter lab
 ```
 
 ## Data

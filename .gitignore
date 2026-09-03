@@ -11,6 +11,8 @@ working_dir/
 working-dir/
 working-dir-static/
 .venv/
+__pycache__/
+*.py[cod]
 *-dataset/**/*.jar
 *.iml
 *.env

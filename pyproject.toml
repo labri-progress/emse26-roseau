@@ -6,8 +6,8 @@
 [tool.uv.workspace]
 members = [
     "benchmark/analysis",
+    "benchmark/walk/build-times",
     "results/bench",
-    "results/longitudinal/preliminary",
     "results/longitudinal/walk/notebooks",
     "libraries-dataset/1_libs_selection",
     "libraries-dataset/2_libs_download",

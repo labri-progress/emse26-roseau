@@ -1,3 +1,0 @@
-Error on compilation: 2
-Error on API extraction: 0
-Error on API incremental extraction: 0

@@ -13,12 +13,12 @@ resolution-markers = [
 [manifest]
 members = [
     "accuracy-analysis",
+    "build-times",
     "jdk-download",
     "libs-download",
     "libs-selection",
     "longitudinal-analysis",
     "performance-analysis",
-    "preliminary-analysis",
 ]
 
 [manifest.dependency-groups]
@@ -201,6 +201,17 @@ wheels = [
 css = [
     { name = "tinycss2" },
 ]
+
+[[package]]
+name = "build-times"
+version = "0.1.0"
+source = { virtual = "benchmark/walk/build-times" }
+dependencies = [
+    { name = "pyyaml" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "pyyaml", specifier = ">=6.0" }]
 
 [[package]]
 name = "certifi"
@@ -1501,17 +1512,6 @@ sdist = { url = "https://files.pythonhosted.org/packages/69/b7/802a56eca9f2fac45
 wheels = [
     { url = "https://files.pythonhosted.org/packages/27/6e/80993e10a0482f630cef528635789233224f36b1ffd11592aa15d13ff9ce/platformdirs-4.11.7-py3-none-any.whl", hash = "sha256:8a02cb259042c79d1cd0450facc2fe6dc9d303ae7901afbe33bf8ea0b188cef6", size = 23938, upload-time = "2026-09-01T13:35:09.02Z" },
 ]
-
-[[package]]
-name = "preliminary-analysis"
-version = "0.1.0"
-source = { virtual = "results/longitudinal/preliminary" }
-dependencies = [
-    { name = "pandas" },
-]
-
-[package.metadata]
-requires-dist = [{ name = "pandas", specifier = "==2.2.3" }]
 
 [[package]]
 name = "prometheus-client"

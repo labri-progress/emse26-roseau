@@ -24,6 +24,7 @@ This repository is organized as follows. Subdirectories contain specific instruc
 | **RQ1** Accuracy | `mvn exec:java -Dexec.mainClass=com.github.alien.bench.accuracy.JezekStaticBenchmark` in [benchmark](benchmark/) | data: [benchmark/analysis/data](benchmark/analysis/data/) |
 | **RQ2** Performance | `java -jar target/benchmarks.jar -rf json` in [benchmark](benchmark/) | data + notebook: [results/bench](results/bench/) |
 | **RQ3** Longitudinal | `BatchGitWalker` on the `git-walk` branch of [alien-tools/roseau](https://github.com/alien-tools/roseau), driven by [benchmark/walk/walk.yaml](benchmark/walk/walk.yaml) | data + notebooks: [results/longitudinal/walk/notebooks](results/longitudinal/walk/notebooks/) |
+| **RQ3** Preliminary study | `uv run python measure_build_times.py` in [benchmark/walk/build-times](benchmark/walk/build-times/) | data: [library-build-times.csv](results/longitudinal/walk/notebooks/library-build-times.csv), notebook: [build_times.ipynb](results/longitudinal/walk/notebooks/build_times.ipynb) |
 
 ## Requirements
 

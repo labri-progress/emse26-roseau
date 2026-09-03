@@ -1,6 +1,6 @@
 # Longitudinal analysis notebooks (RQ3)
 
-Analyses of the commit-level walk of 29 Java libraries (184,246 commits).
+Analyses of the commit-level walk of 29 Java libraries (186,946 commits).
 
 ```bash
 uv sync && uv run jupyter lab

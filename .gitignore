@@ -24,3 +24,4 @@ roseau/
 
 .DS_Store
 .ipynb_checkpoints/
+results/releases/data/*-inputs.csv

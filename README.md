@@ -16,6 +16,7 @@ This repository is organized as follows. Subdirectories contain specific instruc
     - Running Roseau, Japicmp, and Revapi on the improved accuracy dataset and collecting their accuracy
     - Running the JMH benchmarks to measure their runtime performance
     - [benchmark/walk](benchmark/walk/): the configuration of the longitudinal study (RQ3)
+    - [benchmark/releases](benchmark/releases/): the release-level study comparing the commit-level walk with a tag-level walk of the same branch (RQ3 follow-up)
 
 ## Reproducing each research question
 
@@ -25,6 +26,7 @@ This repository is organized as follows. Subdirectories contain specific instruc
 | **RQ2** Performance | `java -jar target/benchmarks.jar -rf json` in [benchmark](benchmark/) | data + notebook: [results/bench](results/bench/) |
 | **RQ3** Longitudinal | `BatchGitWalker` on the `git-walk` branch of [alien-tools/roseau](https://github.com/alien-tools/roseau), driven by [benchmark/walk/walk.yaml](benchmark/walk/walk.yaml) | data + notebooks: [results/longitudinal/walk/notebooks](results/longitudinal/walk/notebooks/) |
 | **RQ3** Preliminary study | `uv run python measure_build_times.py` in [benchmark/walk/build-times](benchmark/walk/build-times/) | data: [library-build-times.csv](results/longitudinal/walk/notebooks/library-build-times.csv), notebook: [build_times.ipynb](results/longitudinal/walk/notebooks/build_times.ipynb) |
+| **RQ3** Commit level vs. release level | `tag_intervals.py` → `run_diffs.sh --tags` → `analyze_tags.py` in [benchmark/releases](benchmark/releases/) | data + notebooks: [results/releases](results/releases/) |
 
 ## Requirements
 

@@ -7,8 +7,10 @@
 members = [
     "benchmark/analysis",
     "benchmark/walk/build-times",
+    "benchmark/releases",
     "results/bench",
     "results/longitudinal/walk/notebooks",
+    "results/releases",
     "libraries-dataset/1_libs_selection",
     "libraries-dataset/2_libs_download",
     "libraries-dataset/3_jdk_download",

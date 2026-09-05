@@ -11,6 +11,7 @@ members = [
     "results/bench",
     "results/longitudinal/walk/notebooks",
     "results/releases",
+    "results/exclusions",
     "libraries-dataset/1_libs_selection",
     "libraries-dataset/2_libs_download",
     "libraries-dataset/3_jdk_download",

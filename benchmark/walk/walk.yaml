@@ -1,13 +1,27 @@
 defaults:
   exclusions:
     names:
-    - ".*(\\.)?(internal|example|examples)(\\.)?.*"
+    - "(?:^|.*\\.)(internal|example|examples|impl|experimental|test|tests|testbed|testsuite)(?:\\..*|$)"
     annotations:
     - name: Internal
       args: {}
     - name: Beta
       args: {}
     - name: Test
+      args: {}
+    - name: VisibleForTesting
+      args: {}
+    - name: DoNotCall
+      args: {}
+    - name: RestrictedApi
+      args: {}
+    - name: PackagePrivate
+      args: {}
+    - name: Experimental
+      args: {}
+    - name: InternalApi
+      args: {}
+    - name: ExperimentalApi
       args: {}
 
 repositories:
@@ -52,9 +66,6 @@ repositories:
   endSha: "1fdfe142d57febdd22a9e7d91ccdcc6d71a6efb0"
   url: "https://github.com/apache/logging-log4j2"
   gitDir: "/data/new/apache__logging-log4j2/.git"
-  exclusions:
-    names:
-    - .*(\.)?impl(\.)?.*
   sourceRoots:
   - /data/new/apache__logging-log4j2/log4j-core/src/main/java
   - /data/new/apache__logging-log4j2/core/src/main/java
@@ -73,9 +84,6 @@ repositories:
   endSha: "cfe04fd3de9b32fc0540284bb921b9b3ec34e0cf"
   url: "https://github.com/h2database/h2database"
   gitDir: "/data/new/h2database__h2database/.git"
-  exclusions:
-    names:
-    - .*(\.)?impl(\.)?.*
   sourceRoots:
   - /data/new/h2database__h2database/h2/src/main
 
@@ -111,16 +119,6 @@ repositories:
   endSha: "816eaa1d8b0ab1f5d16b671337dbb447e3845ce0"
   url: "https://github.com/google/guava"
   gitDir: "/data/new/google__guava/.git"
-  exclusions:
-    annotations:
-      - name: com.google.common.annotations.VisibleForTesting
-        args: {}
-      - name: com.google.errorprone.annotations.DoNotCall
-        args: {}
-      - name: com.google.common.annotations.Beta
-        args: {}
-      - name: com.google.errorprone.annotations.RestrictedApi
-        args: {}
   sourceRoots:
   - /data/new/google__guava/guava/src
   - /data/new/google__guava/src
@@ -150,12 +148,6 @@ repositories:
   endSha: "668253c41702cb0fcfbf3b9586704b92610faf55"
   url: "https://github.com/assertj/assertj"
   gitDir: "/data/new/assertj__assertj/.git"
-  exclusions:
-    annotations:
-      - name: org.assertj.core.util.VisibleForTesting
-        args: {}
-      - name: org.assertj.core.annotation.Beta
-        args: {}
   sourceRoots:
   - /data/new/assertj__assertj/assertj-core/src/main/java
   - /data/new/assertj__assertj/src/main/java
@@ -194,9 +186,6 @@ repositories:
   endSha: "5a050751f15bacca225d479883764f3a707640bb"
   url: "https://github.com/alibaba/fastjson2"
   gitDir: "/data/new/alibaba__fastjson2/.git"
-  exclusions:
-    names:
-    - .*(\.)?impl(\.)?.*
   sourceRoots:
   - /data/new/alibaba__fastjson2/core/src/main/java
 
@@ -213,13 +202,6 @@ repositories:
   endSha: "9683977c679fee3c2367e7b4e889e53c15185ff5"
   url: "https://github.com/projectlombok/lombok"
   gitDir: "/data/new/projectlombok__lombok/.git"
-  exclusions:
-    names:
-    - .*(\.)?experimental(\.)?.*
-    annotations:
-      # inferred from HEAD (3 hits)
-      - name: lombok.experimental.PackagePrivate
-        args: {}
   sourceRoots:
   - /data/new/projectlombok__lombok/src/core
   - /data/new/projectlombok__lombok/src
@@ -229,16 +211,6 @@ repositories:
   endSha: "1aac37625715cfa1faf4ccf824f3cec95b628ba2"
   url: "https://github.com/apache/httpcomponents-client"
   gitDir: "/data/new/apache__httpcomponents-client/.git"
-  exclusions:
-    names:
-    - .*(\.)?impl(\.)?.*
-    annotations:
-      - name: org.apache.hc.core5.annotation.Internal
-        args: {}
-      - name: org.apache.hc.core5.annotation.Experimental
-        args: {}
-      - name: org.conscrypt.Internal
-        args: {}
   sourceRoots:
   - /data/new/apache__httpcomponents-client/httpclient5/src/main/java
   - /data/new/apache__httpcomponents-client/httpclient/src/main/java
@@ -316,9 +288,6 @@ repositories:
   endSha: "c1e206f816f4e210301c65ff3efeba7796424882"
   url: "https://github.com/apache/commons-logging"
   gitDir: "/data/new/apache__commons-logging/.git"
-  exclusions:
-    names:
-    - .*(\.)?impl(\.)?.*
   sourceRoots:
   - /data/new/apache__commons-logging/src/main/java
   - /data/new/apache__commons-logging/src/java

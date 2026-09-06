@@ -26,7 +26,7 @@ defaults:
 
 repositories:
 - libraryId: spring-context
-  startSha: "8119659fb1e4ae6fabe8897c42ba7629fda07b21"
+  startSha: "99a441fe312c2bd0c951ea4952fb70d7229f187a"
   endSha: "0eba6f0da3fbd879326226c9310791ceb329bb82"
   url: "https://github.com/spring-projects/spring-framework"
   gitDir: "/data/new/spring-projects__spring-framework/.git"
@@ -44,7 +44,7 @@ repositories:
   - /data/new/protocolbuffers__protobuf/java/src/main/java
 
 - libraryId: org.osgi.core
-  startSha: "fdc81a80d3dd5a81611781b0db1a197c8f9ef683"
+  startSha: "a969c68ba7c3c3003c9c461a04dc1e3ac63d28b9"
   endSha: "d637c9984b63c8388679c4dfeab83b17dd2ec26e"
   url: "https://github.com/osgi/osgi"
   gitDir: "/data/new/osgi__osgi/.git"
@@ -52,7 +52,7 @@ repositories:
   - /data/new/osgi__osgi/org.osgi.framework/src
 
 - libraryId: maven-plugin-api
-  startSha: "3db476f1a2b6826d0aee4e9937cb73ae14cd7fae"
+  startSha: "45da0a70c08581cdd0125b4af481b37c6a74782c"
   endSha: "f8c87e3dc128866ad3455af2983f9cf891677bee"
   url: "https://github.com/apache/maven"
   gitDir: "/data/new/apache__maven/.git"
@@ -62,7 +62,7 @@ repositories:
   - /data/new/apache__maven/maven-plugin/src/main/java
 
 - libraryId: log4j-core
-  startSha: "10fb9656a916d1c0ff57c28d7dcbfcb5bd313278"
+  startSha: "6d0959e9e83a9ca72414dafe021a0a82c20a2a9c"
   endSha: "1fdfe142d57febdd22a9e7d91ccdcc6d71a6efb0"
   url: "https://github.com/apache/logging-log4j2"
   gitDir: "/data/new/apache__logging-log4j2/.git"
@@ -70,17 +70,23 @@ repositories:
   - /data/new/apache__logging-log4j2/log4j-core/src/main/java
   - /data/new/apache__logging-log4j2/core/src/main/java
   - /data/new/apache__logging-log4j2/log4j2-core/src/main/java
+  - /data/new/apache__logging-log4j2/trunk/log4j2-core/src/main/java
+  - /data/new/apache__logging-log4j2/rgoers/log4j2-core/src/main/java
 
 - libraryId: log4j-api
-  startSha: "10fb9656a916d1c0ff57c28d7dcbfcb5bd313278"
-  endSha: "2a2f422336c455dd15af11743dba6cdd1d656bd5"
+  startSha: "6d0959e9e83a9ca72414dafe021a0a82c20a2a9c"
+  endSha: "857855e380756b87e28fd8738577a62c394df940"
   url: "https://github.com/apache/logging-log4j2"
   gitDir: "/data/new/apache__logging-log4j2/.git"
   sourceRoots:
   - /data/new/apache__logging-log4j2/log4j-api/src/main/java
+  - /data/new/apache__logging-log4j2/api/src/main/java
+  - /data/new/apache__logging-log4j2/log4j2-api/src/main/java
+  - /data/new/apache__logging-log4j2/trunk/log4j2-api/src/main/java
+  - /data/new/apache__logging-log4j2/rgoers/log4j2-api/src/main/java
 
 - libraryId: h2
-  startSha: "b02f58d3d2188872fbd8552675b411a8990f59de"
+  startSha: "5a86eaff7eba71ad7321a567eeebe37a41a97f1f"
   endSha: "cfe04fd3de9b32fc0540284bb921b9b3ec34e0cf"
   url: "https://github.com/h2database/h2database"
   gitDir: "/data/new/h2database__h2database/.git"
@@ -96,16 +102,19 @@ repositories:
   - /data/new/FasterXML__jackson-databind/src/main/java
 
 - libraryId: junit-jupiter-api
-  startSha: "4545a251deebdf12255cdf769651e08d9441962f"
+  startSha: "c4c657f40b14108863e05d6ed09035cb3559506b"
   endSha: "07ef5e7316dd8b51d1b9a23f1c924bcbf7a928a1"
   url: "https://github.com/junit-team/junit-framework"
   gitDir: "/data/new/junit-team__junit-framework/.git"
   sourceRoots:
   - /data/new/junit-team__junit-framework/junit-jupiter-api/src/main/java
   - /data/new/junit-team__junit-framework/junit5-api/src/main/java
+  - /data/new/junit-team__junit-framework/junit-core/src/main/java
+  - /data/new/junit-team__junit-framework/junit-lambda-core/src/main/java
+  - /data/new/junit-team__junit-framework/old-junit-core/src/main/java
 
 - libraryId: commons-lang
-  startSha: "750a21e86441b247d85c95e59bf17e596a69d626"
+  startSha: "6627f7ad8fb08d6c23b83d6c9f0a6830e9e7085a"
   endSha: "422ab637736e06076c04a768ce03ecc2e5344937"
   url: "https://github.com/apache/commons-lang"
   gitDir: "/data/new/apache__commons-lang/.git"
@@ -115,7 +124,7 @@ repositories:
   - /data/new/apache__commons-lang/src
 
 - libraryId: guava
-  startSha: "db3929bd79ef57f8da40515b663f40200a941fa8"
+  startSha: "dc5915eb1072c61ff2c3c704af4ae36b25f97b6c"
   endSha: "816eaa1d8b0ab1f5d16b671337dbb447e3845ce0"
   url: "https://github.com/google/guava"
   gitDir: "/data/new/google__guava/.git"
@@ -134,7 +143,7 @@ repositories:
   - /data/new/mockito__mockito/src
 
 - libraryId: commons-io
-  startSha: "9423d7dc927d7d44980b08b59b2a127f8f26ae99"
+  startSha: "29119dead7ff12541a3f5c154d2128573f740a78"
   endSha: "d4bfb6f4213517a800ca2eba79ce3772e39ec36b"
   url: "https://github.com/apache/commons-io"
   gitDir: "/data/new/apache__commons-io/.git"
@@ -153,18 +162,25 @@ repositories:
   - /data/new/assertj__assertj/src/main/java
 
 - libraryId: testng
-  startSha: "a282b456280b6e359be1049b11e54f852732a2fe"
+  startSha: "89ad3cc62a384d7021d8600033c4fff9543a2ede"
   endSha: "8d167fb325ecdefa09d877a5b47865ae82518677"
   url: "https://github.com/testng-team/testng"
   gitDir: "/data/new/testng-team__testng/.git"
   sourceRoots:
-  - /data/new/testng-team__testng/testng-core-api/src/main/java
+  - - /data/new/testng-team__testng/testng-core-api/src/main/java
+    - /data/new/testng-team__testng/testng-core/src/main/java
+    - /data/new/testng-team__testng/testng-asserts/src/main/java
+    - /data/new/testng-team__testng/testng-collections/src/main/java
+    - /data/new/testng-team__testng/testng-reflection-utils/src/main/java
+    - /data/new/testng-team__testng/testng-runner-api/src/main/java
   - /data/new/testng-team__testng/core/src/main/java
   - /data/new/testng-team__testng/src/main/java
   - /data/new/testng-team__testng/testng/src/main
+  - /data/new/testng-team__testng/src/main
+  - /data/new/testng-team__testng/src
 
 - libraryId: commons-collections
-  startSha: "6aff6757955abc3fc11ed3f1ee10e6e1d8351e34"
+  startSha: "13a119de0b5709d50214458482f249f5de2fd4b6"
   endSha: "4d9e0bd33a050cef05b0f65289770d8bddefad3e"
   url: "https://github.com/apache/commons-collections"
   gitDir: "/data/new/apache__commons-collections/.git"
@@ -174,7 +190,7 @@ repositories:
   - /data/new/apache__commons-collections/src
 
 - libraryId: jackson-core
-  startSha: "8f75cb76f06e6c5286dae0d92f9f2676b72957da"
+  startSha: "f15531c04f87f9e4e4724772426603a909eabe2c"
   endSha: "701cd6af465c586aa9b33e95294acde034bd17af"
   url: "https://github.com/FasterXML/jackson-core"
   gitDir: "/data/new/FasterXML__jackson-core/.git"
@@ -182,7 +198,7 @@ repositories:
   - /data/new/FasterXML__jackson-core/src/main/java
 
 - libraryId: fastjson
-  startSha: "c694f17d6e167513549aef021ce39256a2818bc7"
+  startSha: "a1df7ac9a1c6c4de09b7d8def7d1aa3593ffeefe"
   endSha: "5a050751f15bacca225d479883764f3a707640bb"
   url: "https://github.com/alibaba/fastjson2"
   gitDir: "/data/new/alibaba__fastjson2/.git"
@@ -190,7 +206,7 @@ repositories:
   - /data/new/alibaba__fastjson2/core/src/main/java
 
 - libraryId: logback-classic
-  startSha: "478710023933be9c224216ad0237afa7f719c587"
+  startSha: "7276ec51803c26e6e1e2a2e6d488f3f984c6d1c1"
   endSha: "4d0975eee7f1541ef198bf400afaac895021fd12"
   url: "https://github.com/qos-ch/logback"
   gitDir: "/data/new/qos-ch__logback/.git"
@@ -207,7 +223,7 @@ repositories:
   - /data/new/projectlombok__lombok/src
 
 - libraryId: httpclient
-  startSha: "f10733ceadc309cf7153457af7fb3321031c2d27"
+  startSha: "d5076feb53491cab83569f467ef4ab60f0a90083"
   endSha: "1aac37625715cfa1faf4ccf824f3cec95b628ba2"
   url: "https://github.com/apache/httpcomponents-client"
   gitDir: "/data/new/apache__httpcomponents-client/.git"
@@ -218,7 +234,7 @@ repositories:
   - /data/new/apache__httpcomponents-client/src/java
 
 - libraryId: commons-codec
-  startSha: "16d3e23d4dbb8480e95a5bfe929e4bd8847ce676"
+  startSha: "71205dde6b8eda4140c777b4fb71935d73bf2d12"
   endSha: "f3b0eb5499266e99170bcc674c93d8a69790fc8b"
   url: "https://github.com/apache/commons-codec"
   gitDir: "/data/new/apache__commons-codec/.git"
@@ -228,26 +244,33 @@ repositories:
   - /data/new/apache__commons-codec/src
 
 - libraryId: mysql-connector-j
-  startSha: "46a676a1dbda83c80c660286ec96eefafec9bf8d"
+  startSha: "e42249e4a38298118dfe38dfc0d1c50fe0e63b73"
   endSha: "fdef61f4af21fa9e0ac334ff0664ec754c164cc0"
   url: "https://github.com/mysql/mysql-connector-j"
   gitDir: "/data/new/mysql__mysql-connector-j/.git"
   sourceRoots:
-  - /data/new/mysql__mysql-connector-j/src/main/core-api/java
+  - - /data/new/mysql__mysql-connector-j/src/main/core-api/java
+    - /data/new/mysql__mysql-connector-j/src/main/core-impl/java
+    - /data/new/mysql__mysql-connector-j/src/main/protocol-impl/java
+    - /data/new/mysql__mysql-connector-j/src/main/user-api/java
+    - /data/new/mysql__mysql-connector-j/src/main/user-impl/java
   - /data/new/mysql__mysql-connector-j/src/main/java
   - /data/new/mysql__mysql-connector-j/src
   - /data/new/mysql__mysql-connector-j/connector-j
+  - /data/new/mysql__mysql-connector-j/branch_5_0/connector-j/src
 
 - libraryId: retrofit
-  startSha: "17886a10eecccada75e736cb2ffb30b8b8a58b55"
+  startSha: "fc89b1ad834fcbc872b371e61e3335c1ceb028e6"
   endSha: "77e6ba21d9ba372d1b23ef29881912910da23347"
   url: "https://github.com/square/retrofit"
   gitDir: "/data/new/square__retrofit/.git"
   sourceRoots:
   - /data/new/square__retrofit/retrofit/src/main/java
+  - /data/new/square__retrofit/http/src/main/java
+  - /data/new/square__retrofit/modules/http/src
 
 - libraryId: commons-beanutils
-  startSha: "24b7ca89b8ae903b049ea0269c0ec3e79f330fda"
+  startSha: "c44f209fe457fc6593b09bbec020680665da5443"
   endSha: "cdabddb8787d8c7b46d5878472bf43ea79669de3"
   url: "https://github.com/apache/commons-beanutils"
   gitDir: "/data/new/apache__commons-beanutils/.git"
@@ -257,7 +280,7 @@ repositories:
   - /data/new/apache__commons-beanutils/src
 
 - libraryId: joda-time
-  startSha: "b596f23e517e1fe0ab883554b42b0166f708721a"
+  startSha: "7fe68f297f7c372b515fde7f0bc8d721ec257ceb"
   endSha: "c377753444ba79cccc0c6c4806ba6fd0a800e629"
   url: "https://github.com/JodaOrg/joda-time"
   gitDir: "/data/new/JodaOrg__joda-time/.git"
@@ -275,16 +298,16 @@ repositories:
   - /data/new/google__gson/gson/src/main/java
 
 - libraryId: slf4j-api
-  startSha: "f5e63612a8981efa2d7d64653cb949cc8e98b046"
+  startSha: "239f8e13213d0f5f8a2323109e973596decf9e47"
   endSha: "d2073bece8310017914e1ff65d7107b2d4869c7d"
   url: "https://github.com/qos-ch/slf4j"
   gitDir: "/data/new/qos-ch__slf4j/.git"
   sourceRoots:
   - /data/new/qos-ch__slf4j/slf4j-api/src/main/java
-  - /data/new/qos-ch__slf4j/src/filtered-java
+  - /data/new/qos-ch__slf4j/src/java
 
 - libraryId: commons-logging
-  startSha: "aee9225a28c258fe2eefa5898c295543a4e277da"
+  startSha: "db6faedfe455c6c001af88d1721055ded1e962dd"
   endSha: "c1e206f816f4e210301c65ff3efeba7796424882"
   url: "https://github.com/apache/commons-logging"
   gitDir: "/data/new/apache__commons-logging/.git"

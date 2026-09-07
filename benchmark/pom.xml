@@ -1,5 +1,6 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.alien</groupId>
@@ -15,7 +16,7 @@
         <jmh.version>1.37</jmh.version>
         <uberjar.name>benchmarks</uberjar.name>
 
-        <roseau.version>0.6.0</roseau.version>
+        <roseau.version>0.7.0-SNAPSHOT</roseau.version>
         <japicmp.version>0.25.4</japicmp.version>
         <revapi-java.version>0.28.4</revapi-java.version>
     </properties>
@@ -92,7 +93,7 @@
             <version>4.22.0</version>
         </dependency>
         <dependency>
-        <groupId>com.anthropic</groupId>
+            <groupId>com.anthropic</groupId>
             <artifactId>anthropic-java</artifactId>
             <version>2.15.0</version>
         </dependency>
@@ -134,11 +135,11 @@
                             <finalName>${uberjar.name}</finalName>
                             <transformers>
                                 <transformer
-                                        implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                                     <mainClass>org.openjdk.jmh.Main</mainClass>
                                 </transformer>
                                 <transformer
-                                        implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
+                                    implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer" />
                             </transformers>
                             <filters>
                                 <filter>

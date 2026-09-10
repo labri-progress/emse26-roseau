@@ -35,7 +35,7 @@ public class OpenAI extends LLMTool {
 			.model(ChatModel.of(MODEL_NAME))
 			.instructions(systemPrompt)
 			.input(userPrompt)
-			.maxOutputTokens(MAX_TOKENS_THINKING_MODE)
+			.maxOutputTokens(MAX_TOKENS)
 			//.temperature(TEMPERATURE) // Not supported when reasoning mode is not "none"
 			//.topP(TOP_P) // Not supported when reasoning mode is not "none"
 			.reasoning(Reasoning.builder()

@@ -18,7 +18,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
-import java.util.Optional;
+import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Function;
 import java.util.jar.JarOutputStream;
@@ -29,7 +29,7 @@ public class Benchmark {
 	private static final String CASES_CSV = "results-by-case.csv";
 	private static final String TOOLS_CSV = "results-by-tool.csv";
 
-	public static  void runBenchmark(Path v1Path, Path v2Path, Path clientPath, Path workingPath, Path v1Jars,
+	public static void runBenchmark(Path v1Path, Path v2Path, Path clientPath, Path workingPath, Path v1Jars,
 	                                 Path v2Jars, Path clientJars, List<Tool> jarTools, List<Tool> sourceTools)
 		throws IOException {
 		JavaCompiler.ensureJavaVersion(25);
@@ -253,7 +253,7 @@ public class Benchmark {
 		toolsWithPaths.forEach(toolWithPaths -> metricsByTool.put(toolWithPaths.tool().getName(), new ToolMetrics()));
 
 		prepareCSV(casesCsv, toolsWithPaths);
-		Optional<String> lastBenchmarkCase = getLastCaseFromCSV(casesCsv);
+		Set<String> completedCases = getCompletedCasesFromCSV(casesCsv);
 
 		LinkedHashMap<String, BreakingVerdict> benchmarkCases = groundTruth.entrySet().stream()
 			.sorted(Map.Entry.comparingByKey())
@@ -264,13 +264,8 @@ public class Benchmark {
 				LinkedHashMap::new
 			));
 
-		var benchmarkCaseStream = benchmarkCases.entrySet().stream();
-		if (lastBenchmarkCase.isPresent()) {
-			var lastCase = lastBenchmarkCase.get();
-			benchmarkCaseStream = benchmarkCaseStream
-				.dropWhile(entry -> !entry.getKey().equals(lastCase))
-				.skip(1);
-		}
+		var benchmarkCaseStream = benchmarkCases.entrySet().stream()
+			.filter(entry -> !completedCases.contains(entry.getKey()));
 
 		benchmarkCaseStream.parallel().forEach(entry -> {
 			var caseName = entry.getKey();
@@ -352,6 +347,11 @@ public class Benchmark {
 
 	private static void removeIncompleteLastLine(Path csvPath) throws IOException {
 		var lines = Files.readAllLines(csvPath);
+		if (lines.isEmpty()) {
+			return;
+		}
+		var expectedFieldCount = lines.get(0).split(";", -1).length;
+
 		int lastNonEmptyLineIndex = -1;
 		for (int i = lines.size() - 1; i >= 0; i--) {
 			if (!lines.get(i).trim().isEmpty()) {
@@ -360,12 +360,12 @@ public class Benchmark {
 			}
 		}
 
-		if (lastNonEmptyLineIndex < 0) {
+		if (lastNonEmptyLineIndex <= 0) {
 			return;
 		}
 
 		var lastLine = lines.get(lastNonEmptyLineIndex).trim();
-		if (lastLine.split(";", -1).length == 8) {
+		if (lastLine.split(";", -1).length == expectedFieldCount) {
 			return;
 		}
 
@@ -374,30 +374,23 @@ public class Benchmark {
 		Files.writeString(csvPath, content);
 	}
 
-	private static Optional<String> getLastCaseFromCSV(Path csvPath) {
+	private static Set<String> getCompletedCasesFromCSV(Path csvPath) {
 		if (Files.notExists(csvPath)) {
-			return Optional.empty();
+			return Set.of();
 		}
 
-		try {
-			return getLastNonEmptyLine(csvPath)
-				.map(lastLine -> {
-					var separatorIndex = lastLine.indexOf(';');
-					return separatorIndex >= 0 ? lastLine.substring(0, separatorIndex) : lastLine;
-				})
-				.filter(value -> !"case".equals(value));
-		} catch (IOException e) {
-			throw new RuntimeException("Unable to read last row from CSV " + csvPath, e);
-		}
-	}
-
-	private static Optional<String> getLastNonEmptyLine(Path csvPath) throws IOException {
 		try (Stream<String> lines = Files.lines(csvPath)) {
 			return lines
 				.map(String::trim)
 				.filter(line -> !line.isEmpty())
-				.reduce((first, second) -> second)
-				.map(line -> line.endsWith("\r") ? line.substring(0, line.length() - 1) : line);
+				.map(line -> {
+					var separatorIndex = line.indexOf(';');
+					return separatorIndex >= 0 ? line.substring(0, separatorIndex) : line;
+				})
+				.filter(value -> !"case".equals(value))
+				.collect(Collectors.toSet());
+		} catch (IOException e) {
+			throw new RuntimeException("Unable to read completed cases from CSV " + csvPath, e);
 		}
 	}
 

@@ -10,7 +10,7 @@ public abstract class Tool {
 
 	static {
 		try {
-			dotenv = Dotenv.configure().filename(ENV_VARS_FILE).load();
+			dotenv = Dotenv.configure().filename(ENV_VARS_FILE).ignoreIfMissing().load();
 			dotenv.entries().forEach(entry -> System.setProperty(entry.getKey(), entry.getValue()));
 		} catch (Exception e) {
 			throw new RuntimeException("Unable to load environment variables from " + ENV_VARS_FILE, e);

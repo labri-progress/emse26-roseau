@@ -1,24 +1,7 @@
 #!/usr/bin/env python3
-"""Audit the `sourceRoots` configured in walk.yaml against every library's real history.
+"""Audit `walk.yaml` source roots across first-parent histories.
 
-`GitWalker` picks, at each commit, the *first* configured source root that exists in the
-checked-out tree (`GitWalker.resolveSourceRoot`), and reports the commit without an API if
-none does. A missing or mis-ordered root therefore silently drops commits from the
-longitudinal study, or -- worse -- analyses the wrong module.
-
-This script replays each repository's first-parent chain from `startSha` to `endSha` with a
-single `git log --name-status` pass, maintaining the tracked file set. Because `checkoutCommit`
-runs `git clean -fdx`, a directory exists in the worktree iff at least one tracked file lives
-under it, so the replay reproduces `Files.exists` exactly, without checking anything out.
-
-Three modes:
-
-  gaps      commits where no configured root exists, grouped by the shape of the tree, with
-            the real source roots of a sample commit (derived from `package` declarations)
-  segments  contiguous runs of the chosen roots, with the .java count under them -- shows root
-            switches, empty roots, and roots that hold the wrong module
-  range     the first and last commit at which a root resolves, i.e. the tightest startSha/endSha
-  impact    diff two configs: how many commits (and java-changing commits) gain a root
+Modes: `gaps`, `segments`, `range`, and `impact`.
 
 Usage:
     uv run benchmark/walk/audit_source_roots.py gaps [library ...]
@@ -39,7 +22,7 @@ PKG_RE = re.compile(rb"^\s*package\s+([\w.]+)\s*;", re.M)
 
 
 def first_parent_chain(gitdir, start, end):
-    """Mirror GitWalker.firstParentChain: end back to start along first parents, oldest first."""
+    """Return the oldest-first first-parent chain from start through end."""
     shas = subprocess.run(["git", "--git-dir", gitdir, "rev-list", "--first-parent", end],
                           capture_output=True, text=True, check=True).stdout.split()
     if start:
@@ -51,7 +34,7 @@ def first_parent_chain(gitdir, start, end):
 
 
 def stream_name_status(gitdir, end):
-    """Yield (sha, [(status, path)]) oldest-first, diffed against the first parent."""
+    """Yield oldest-first commits and first-parent file changes."""
     proc = subprocess.Popen(
         ["git", "--git-dir", gitdir, "-c", "core.quotePath=false", "log", "--first-parent",
          "--reverse", "--root", "--no-renames", "-z", "--name-status", "--format=%x01%H", end],
@@ -82,7 +65,7 @@ def ancestors(path):
 
 
 def replay(gitdir, end, chain, roots, on_commit):
-    """Replay history and call on_commit(sha, java_changed, files, dcount, jcount, present)."""
+    """Replay tracked files and invoke on_commit for commits in chain."""
     files, dcount, jcount = set(), collections.Counter(), collections.Counter()
     for sha, entries in stream_name_status(gitdir, end):
         java_changed = False
@@ -106,14 +89,14 @@ def replay(gitdir, end, chain, roots, on_commit):
 
 
 def rel_roots(repo):
-    """Configured source roots as groups of worktree-relative paths (a bare path is a group of one)."""
+    """Return worktree-relative source-root groups."""
     worktree = os.path.dirname(repo["gitDir"])
     return [[os.path.relpath(p, worktree) for p in (entry if isinstance(entry, list) else [entry])]
             for entry in repo["sourceRoots"]]
 
 
 def resolve(groups, dcount):
-    """Mirror GitWalker.resolveSourceRoots: first group with an existing directory, minus the missing ones."""
+    """Return existing paths from the first configured group with any."""
     for group in groups:
         existing = [p for p in group if dcount[p] > 0]
         if existing:
@@ -122,7 +105,7 @@ def resolve(groups, dcount):
 
 
 def infer_roots(gitdir, sha, java_files, limit=4000):
-    """Derive each file's source root from its `package` declaration. Returns Counter(root)."""
+    """Infer source roots from Java package declarations."""
     selection = sorted(java_files)[:limit]
     if not selection:
         return collections.Counter()
@@ -219,7 +202,7 @@ def cmd_segments(only):
 
 
 def cmd_range(only):
-    """Report the first and last chain commit at which a source root resolves."""
+    """Report the range where a configured root resolves."""
     print(f"{'library':22s} {'commits':>8s} {'lead gap':>9s} {'trail gap':>10s}  suggested startSha / endSha")
     for repo in repositories(WALK, only):
         gitdir, roots = repo["gitDir"], rel_roots(repo)

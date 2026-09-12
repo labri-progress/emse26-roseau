@@ -7,8 +7,10 @@ Regenerate the CSV data from the local corpus clones with:
 
 ```bash
 uv run python results/exclusions/scan_conventions.py \
-  --clones-dir clones/roseau-0.7.0
+  --clones-dir clones
 ```
+
+Clones are named `clones/<owner>__<repo>`.
 
 The scanner reads each library's configured source roots at `endSha`, without
 changing the clone's worktree. If a source root was removed before `endSha`, it

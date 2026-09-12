@@ -1,6 +1,6 @@
 # Longitudinal analysis notebooks (RQ3)
 
-Analyses of the commit-level walk of 29 Java libraries (186,946 commits).
+Analyses of the commit-level walk of 29 Java libraries (185,817 commits).
 
 Environment is managed from the repo root (`uv sync` once). Then, from here:
 
@@ -22,7 +22,6 @@ uv run jupyter lab
 
 ## Notebooks
 
-- `build_times.ipynb`: the preliminary study (paper Section 5.3.3) — per-library build success
-  rates and median build times, extrapolated to whole-history JAR construction cost.
-- `longitudinal.ipynb`: API evolution and breaking changes over each history.
-- `performance.ipynb`: Roseau's per-phase runtime across the corpus.
+- `build_times.ipynb`: median sampled build times and whole-history JAR construction estimates.
+- `longitudinal.ipynb`: the corpus-wide breakage summary, paper ridge figure, and 29 library timelines.
+- `performance.ipynb`: workload and runtime tables for the longitudinal walk.

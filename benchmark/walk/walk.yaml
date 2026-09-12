@@ -1,3 +1,5 @@
+# Run the walker from the replication-package root. Clone each repository into
+# clones/<GitHub owner>__<repository>, matching the paths below.
 defaults:
   exclusions:
     names:
@@ -29,289 +31,289 @@ repositories:
   startSha: "99a441fe312c2bd0c951ea4952fb70d7229f187a"
   endSha: "0eba6f0da3fbd879326226c9310791ceb329bb82"
   url: "https://github.com/spring-projects/spring-framework"
-  gitDir: "/data/spring-projects__spring-framework/.git"
+  gitDir: "clones/spring-projects__spring-framework/.git"
   sourceRoots:
-  - /data/spring-projects__spring-framework/spring-context/src/main/java
-  - /data/spring-projects__spring-framework/org.springframework.context/src/main/java
+  - clones/spring-projects__spring-framework/spring-context/src/main/java
+  - clones/spring-projects__spring-framework/org.springframework.context/src/main/java
 
 - libraryId: protobuf-java
   startSha: "40ee551715c3a784ea6132dbf604b0e665ca2def"
   endSha: "a19901d3c64acc175ed84451a2d24f480b74c526"
   url: "https://github.com/protocolbuffers/protobuf"
-  gitDir: "/data/protocolbuffers__protobuf/.git"
+  gitDir: "clones/protocolbuffers__protobuf/.git"
   sourceRoots:
-  - /data/protocolbuffers__protobuf/java/core/src/main/java
-  - /data/protocolbuffers__protobuf/java/src/main/java
+  - clones/protocolbuffers__protobuf/java/core/src/main/java
+  - clones/protocolbuffers__protobuf/java/src/main/java
 
 - libraryId: org.osgi.core
   startSha: "a969c68ba7c3c3003c9c461a04dc1e3ac63d28b9"
   endSha: "d637c9984b63c8388679c4dfeab83b17dd2ec26e"
   url: "https://github.com/osgi/osgi"
-  gitDir: "/data/osgi__osgi/.git"
+  gitDir: "clones/osgi__osgi/.git"
   sourceRoots:
-  - /data/osgi__osgi/org.osgi.framework/src
+  - clones/osgi__osgi/org.osgi.framework/src
 
 - libraryId: maven-plugin-api
   startSha: "45da0a70c08581cdd0125b4af481b37c6a74782c"
   endSha: "f8c87e3dc128866ad3455af2983f9cf891677bee"
   url: "https://github.com/apache/maven"
-  gitDir: "/data/apache__maven/.git"
+  gitDir: "clones/apache__maven/.git"
   sourceRoots:
-  - /data/apache__maven/compat/maven-plugin-api/src/main/java
-  - /data/apache__maven/maven-plugin-api/src/main/java
-  - /data/apache__maven/maven-plugin/src/main/java
+  - clones/apache__maven/compat/maven-plugin-api/src/main/java
+  - clones/apache__maven/maven-plugin-api/src/main/java
+  - clones/apache__maven/maven-plugin/src/main/java
 
 - libraryId: log4j-core
   startSha: "6d0959e9e83a9ca72414dafe021a0a82c20a2a9c"
   endSha: "1fdfe142d57febdd22a9e7d91ccdcc6d71a6efb0"
   url: "https://github.com/apache/logging-log4j2"
-  gitDir: "/data/apache__logging-log4j2/.git"
+  gitDir: "clones/apache__logging-log4j2/.git"
   sourceRoots:
-  - /data/apache__logging-log4j2/log4j-core/src/main/java
-  - /data/apache__logging-log4j2/core/src/main/java
-  - /data/apache__logging-log4j2/log4j2-core/src/main/java
-  - /data/apache__logging-log4j2/trunk/log4j2-core/src/main/java
-  - /data/apache__logging-log4j2/rgoers/log4j2-core/src/main/java
+  - clones/apache__logging-log4j2/log4j-core/src/main/java
+  - clones/apache__logging-log4j2/core/src/main/java
+  - clones/apache__logging-log4j2/log4j2-core/src/main/java
+  - clones/apache__logging-log4j2/trunk/log4j2-core/src/main/java
+  - clones/apache__logging-log4j2/rgoers/log4j2-core/src/main/java
 
 - libraryId: log4j-api
   startSha: "6d0959e9e83a9ca72414dafe021a0a82c20a2a9c"
   endSha: "857855e380756b87e28fd8738577a62c394df940"
   url: "https://github.com/apache/logging-log4j2"
-  gitDir: "/data/apache__logging-log4j2/.git"
+  gitDir: "clones/apache__logging-log4j2/.git"
   sourceRoots:
-  - /data/apache__logging-log4j2/log4j-api/src/main/java
-  - /data/apache__logging-log4j2/api/src/main/java
-  - /data/apache__logging-log4j2/log4j2-api/src/main/java
-  - /data/apache__logging-log4j2/trunk/log4j2-api/src/main/java
-  - /data/apache__logging-log4j2/rgoers/log4j2-api/src/main/java
+  - clones/apache__logging-log4j2/log4j-api/src/main/java
+  - clones/apache__logging-log4j2/api/src/main/java
+  - clones/apache__logging-log4j2/log4j2-api/src/main/java
+  - clones/apache__logging-log4j2/trunk/log4j2-api/src/main/java
+  - clones/apache__logging-log4j2/rgoers/log4j2-api/src/main/java
 
 - libraryId: h2
   startSha: "5a86eaff7eba71ad7321a567eeebe37a41a97f1f"
   endSha: "cfe04fd3de9b32fc0540284bb921b9b3ec34e0cf"
   url: "https://github.com/h2database/h2database"
-  gitDir: "/data/h2database__h2database/.git"
+  gitDir: "clones/h2database__h2database/.git"
   sourceRoots:
-  - /data/h2database__h2database/h2/src/main
+  - clones/h2database__h2database/h2/src/main
 
 - libraryId: jackson-databind
   startSha: "e4f23bb6779d434d88a7c4335f92d13ea639b373"
   endSha: "948558cdcae6c2e31cc971d82d248af039ead4fc"
   url: "https://github.com/FasterXML/jackson-databind"
-  gitDir: "/data/FasterXML__jackson-databind/.git"
+  gitDir: "clones/FasterXML__jackson-databind/.git"
   sourceRoots:
-  - /data/FasterXML__jackson-databind/src/main/java
+  - clones/FasterXML__jackson-databind/src/main/java
 
 - libraryId: junit-jupiter-api
   startSha: "c4c657f40b14108863e05d6ed09035cb3559506b"
   endSha: "07ef5e7316dd8b51d1b9a23f1c924bcbf7a928a1"
   url: "https://github.com/junit-team/junit-framework"
-  gitDir: "/data/junit-team__junit-framework/.git"
+  gitDir: "clones/junit-team__junit-framework/.git"
   sourceRoots:
-  - /data/junit-team__junit-framework/junit-jupiter-api/src/main/java
-  - /data/junit-team__junit-framework/junit5-api/src/main/java
-  - /data/junit-team__junit-framework/junit-core/src/main/java
-  - /data/junit-team__junit-framework/junit-lambda-core/src/main/java
-  - /data/junit-team__junit-framework/old-junit-core/src/main/java
+  - clones/junit-team__junit-framework/junit-jupiter-api/src/main/java
+  - clones/junit-team__junit-framework/junit5-api/src/main/java
+  - clones/junit-team__junit-framework/junit-core/src/main/java
+  - clones/junit-team__junit-framework/junit-lambda-core/src/main/java
+  - clones/junit-team__junit-framework/old-junit-core/src/main/java
 
 - libraryId: commons-lang
   startSha: "6627f7ad8fb08d6c23b83d6c9f0a6830e9e7085a"
   endSha: "422ab637736e06076c04a768ce03ecc2e5344937"
   url: "https://github.com/apache/commons-lang"
-  gitDir: "/data/apache__commons-lang/.git"
+  gitDir: "clones/apache__commons-lang/.git"
   sourceRoots:
-  - /data/apache__commons-lang/src/main/java
-  - /data/apache__commons-lang/src/java
-  - /data/apache__commons-lang/src
+  - clones/apache__commons-lang/src/main/java
+  - clones/apache__commons-lang/src/java
+  - clones/apache__commons-lang/src
 
 - libraryId: guava
   startSha: "dc5915eb1072c61ff2c3c704af4ae36b25f97b6c"
   endSha: "816eaa1d8b0ab1f5d16b671337dbb447e3845ce0"
   url: "https://github.com/google/guava"
-  gitDir: "/data/google__guava/.git"
+  gitDir: "clones/google__guava/.git"
   sourceRoots:
-  - /data/google__guava/guava/src
-  - /data/google__guava/src
+  - clones/google__guava/guava/src
+  - clones/google__guava/src
 
 - libraryId: mockito-core
   startSha: "7cf6470d88491fe472e28493b50eba8a6fbf0433"
   endSha: "82998ff78a14b2111e07ba24c5a7fa731a5f0a82"
   url: "https://github.com/mockito/mockito"
-  gitDir: "/data/mockito__mockito/.git"
+  gitDir: "clones/mockito__mockito/.git"
   sourceRoots:
-  - /data/mockito__mockito/mockito-core/src/main/java
-  - /data/mockito__mockito/src/main/java
-  - /data/mockito__mockito/src
+  - clones/mockito__mockito/mockito-core/src/main/java
+  - clones/mockito__mockito/src/main/java
+  - clones/mockito__mockito/src
 
 - libraryId: commons-io
   startSha: "29119dead7ff12541a3f5c154d2128573f740a78"
   endSha: "d4bfb6f4213517a800ca2eba79ce3772e39ec36b"
   url: "https://github.com/apache/commons-io"
-  gitDir: "/data/apache__commons-io/.git"
+  gitDir: "clones/apache__commons-io/.git"
   sourceRoots:
-  - /data/apache__commons-io/src/main/java
-  - /data/apache__commons-io/src/java
-  - /data/apache__commons-io/src
+  - clones/apache__commons-io/src/main/java
+  - clones/apache__commons-io/src/java
+  - clones/apache__commons-io/src
 
 - libraryId: assertj-core
   startSha: "c35ba305e8472a1d518976639421ef5581a0f65e"
   endSha: "668253c41702cb0fcfbf3b9586704b92610faf55"
   url: "https://github.com/assertj/assertj"
-  gitDir: "/data/assertj__assertj/.git"
+  gitDir: "clones/assertj__assertj/.git"
   sourceRoots:
-  - /data/assertj__assertj/assertj-core/src/main/java
-  - /data/assertj__assertj/src/main/java
+  - clones/assertj__assertj/assertj-core/src/main/java
+  - clones/assertj__assertj/src/main/java
 
 - libraryId: testng
   startSha: "89ad3cc62a384d7021d8600033c4fff9543a2ede"
   endSha: "8d167fb325ecdefa09d877a5b47865ae82518677"
   url: "https://github.com/testng-team/testng"
-  gitDir: "/data/testng-team__testng/.git"
+  gitDir: "clones/testng-team__testng/.git"
   sourceRoots:
-  - - /data/testng-team__testng/testng-core-api/src/main/java
-    - /data/testng-team__testng/testng-core/src/main/java
-    - /data/testng-team__testng/testng-asserts/src/main/java
-    - /data/testng-team__testng/testng-collections/src/main/java
-    - /data/testng-team__testng/testng-reflection-utils/src/main/java
-    - /data/testng-team__testng/testng-runner-api/src/main/java
-  - /data/testng-team__testng/core/src/main/java
-  - /data/testng-team__testng/src/main/java
-  - /data/testng-team__testng/testng/src/main
-  - /data/testng-team__testng/src/main
-  - /data/testng-team__testng/src
+  - - clones/testng-team__testng/testng-core-api/src/main/java
+    - clones/testng-team__testng/testng-core/src/main/java
+    - clones/testng-team__testng/testng-asserts/src/main/java
+    - clones/testng-team__testng/testng-collections/src/main/java
+    - clones/testng-team__testng/testng-reflection-utils/src/main/java
+    - clones/testng-team__testng/testng-runner-api/src/main/java
+  - clones/testng-team__testng/core/src/main/java
+  - clones/testng-team__testng/src/main/java
+  - clones/testng-team__testng/testng/src/main
+  - clones/testng-team__testng/src/main
+  - clones/testng-team__testng/src
 
 - libraryId: commons-collections
   startSha: "13a119de0b5709d50214458482f249f5de2fd4b6"
   endSha: "4d9e0bd33a050cef05b0f65289770d8bddefad3e"
   url: "https://github.com/apache/commons-collections"
-  gitDir: "/data/apache__commons-collections/.git"
+  gitDir: "clones/apache__commons-collections/.git"
   sourceRoots:
-  - /data/apache__commons-collections/src/main/java
-  - /data/apache__commons-collections/src/java
-  - /data/apache__commons-collections/src
+  - clones/apache__commons-collections/src/main/java
+  - clones/apache__commons-collections/src/java
+  - clones/apache__commons-collections/src
 
 - libraryId: jackson-core
   startSha: "f15531c04f87f9e4e4724772426603a909eabe2c"
   endSha: "701cd6af465c586aa9b33e95294acde034bd17af"
   url: "https://github.com/FasterXML/jackson-core"
-  gitDir: "/data/FasterXML__jackson-core/.git"
+  gitDir: "clones/FasterXML__jackson-core/.git"
   sourceRoots:
-  - /data/FasterXML__jackson-core/src/main/java
+  - clones/FasterXML__jackson-core/src/main/java
 
 - libraryId: fastjson
   startSha: "a1df7ac9a1c6c4de09b7d8def7d1aa3593ffeefe"
   endSha: "5a050751f15bacca225d479883764f3a707640bb"
   url: "https://github.com/alibaba/fastjson2"
-  gitDir: "/data/alibaba__fastjson2/.git"
+  gitDir: "clones/alibaba__fastjson2/.git"
   sourceRoots:
-  - /data/alibaba__fastjson2/core/src/main/java
+  - clones/alibaba__fastjson2/core/src/main/java
 
 - libraryId: logback-classic
   startSha: "7276ec51803c26e6e1e2a2e6d488f3f984c6d1c1"
   endSha: "4d0975eee7f1541ef198bf400afaac895021fd12"
   url: "https://github.com/qos-ch/logback"
-  gitDir: "/data/qos-ch__logback/.git"
+  gitDir: "clones/qos-ch__logback/.git"
   sourceRoots:
-  - /data/qos-ch__logback/logback-classic/src/main/java
+  - clones/qos-ch__logback/logback-classic/src/main/java
 
 - libraryId: lombok
   startSha: "1677c4a52a0aea1b955f7c2c7d096903d4a8c5ce"
   endSha: "9683977c679fee3c2367e7b4e889e53c15185ff5"
   url: "https://github.com/projectlombok/lombok"
-  gitDir: "/data/projectlombok__lombok/.git"
+  gitDir: "clones/projectlombok__lombok/.git"
   sourceRoots:
-  - /data/projectlombok__lombok/src/core
-  - /data/projectlombok__lombok/src
+  - clones/projectlombok__lombok/src/core
+  - clones/projectlombok__lombok/src
 
 - libraryId: httpclient
   startSha: "d5076feb53491cab83569f467ef4ab60f0a90083"
   endSha: "1aac37625715cfa1faf4ccf824f3cec95b628ba2"
   url: "https://github.com/apache/httpcomponents-client"
-  gitDir: "/data/apache__httpcomponents-client/.git"
+  gitDir: "clones/apache__httpcomponents-client/.git"
   sourceRoots:
-  - /data/apache__httpcomponents-client/httpclient5/src/main/java
-  - /data/apache__httpcomponents-client/httpclient/src/main/java
-  - /data/apache__httpcomponents-client/module-client/src/main/java
-  - /data/apache__httpcomponents-client/src/java
+  - clones/apache__httpcomponents-client/httpclient5/src/main/java
+  - clones/apache__httpcomponents-client/httpclient/src/main/java
+  - clones/apache__httpcomponents-client/module-client/src/main/java
+  - clones/apache__httpcomponents-client/src/java
 
 - libraryId: commons-codec
   startSha: "71205dde6b8eda4140c777b4fb71935d73bf2d12"
   endSha: "f3b0eb5499266e99170bcc674c93d8a69790fc8b"
   url: "https://github.com/apache/commons-codec"
-  gitDir: "/data/apache__commons-codec/.git"
+  gitDir: "clones/apache__commons-codec/.git"
   sourceRoots:
-  - /data/apache__commons-codec/src/main/java
-  - /data/apache__commons-codec/src/java
-  - /data/apache__commons-codec/src
+  - clones/apache__commons-codec/src/main/java
+  - clones/apache__commons-codec/src/java
+  - clones/apache__commons-codec/src
 
 - libraryId: mysql-connector-j
   startSha: "e42249e4a38298118dfe38dfc0d1c50fe0e63b73"
   endSha: "fdef61f4af21fa9e0ac334ff0664ec754c164cc0"
   url: "https://github.com/mysql/mysql-connector-j"
-  gitDir: "/data/mysql__mysql-connector-j/.git"
+  gitDir: "clones/mysql__mysql-connector-j/.git"
   sourceRoots:
-  - - /data/mysql__mysql-connector-j/src/main/core-api/java
-    - /data/mysql__mysql-connector-j/src/main/core-impl/java
-    - /data/mysql__mysql-connector-j/src/main/protocol-impl/java
-    - /data/mysql__mysql-connector-j/src/main/user-api/java
-    - /data/mysql__mysql-connector-j/src/main/user-impl/java
-  - /data/mysql__mysql-connector-j/src/main/java
-  - /data/mysql__mysql-connector-j/src
-  - /data/mysql__mysql-connector-j/connector-j
-  - /data/mysql__mysql-connector-j/branch_5_0/connector-j/src
+  - - clones/mysql__mysql-connector-j/src/main/core-api/java
+    - clones/mysql__mysql-connector-j/src/main/core-impl/java
+    - clones/mysql__mysql-connector-j/src/main/protocol-impl/java
+    - clones/mysql__mysql-connector-j/src/main/user-api/java
+    - clones/mysql__mysql-connector-j/src/main/user-impl/java
+  - clones/mysql__mysql-connector-j/src/main/java
+  - clones/mysql__mysql-connector-j/src
+  - clones/mysql__mysql-connector-j/connector-j
+  - clones/mysql__mysql-connector-j/branch_5_0/connector-j/src
 
 - libraryId: retrofit
   startSha: "fc89b1ad834fcbc872b371e61e3335c1ceb028e6"
   endSha: "77e6ba21d9ba372d1b23ef29881912910da23347"
   url: "https://github.com/square/retrofit"
-  gitDir: "/data/square__retrofit/.git"
+  gitDir: "clones/square__retrofit/.git"
   sourceRoots:
-  - /data/square__retrofit/retrofit/src/main/java
-  - /data/square__retrofit/http/src/main/java
-  - /data/square__retrofit/modules/http/src
+  - clones/square__retrofit/retrofit/src/main/java
+  - clones/square__retrofit/http/src/main/java
+  - clones/square__retrofit/modules/http/src
 
 - libraryId: commons-beanutils
   startSha: "c44f209fe457fc6593b09bbec020680665da5443"
   endSha: "cdabddb8787d8c7b46d5878472bf43ea79669de3"
   url: "https://github.com/apache/commons-beanutils"
-  gitDir: "/data/apache__commons-beanutils/.git"
+  gitDir: "clones/apache__commons-beanutils/.git"
   sourceRoots:
-  - /data/apache__commons-beanutils/src/main/java
-  - /data/apache__commons-beanutils/src/java
-  - /data/apache__commons-beanutils/src
+  - clones/apache__commons-beanutils/src/main/java
+  - clones/apache__commons-beanutils/src/java
+  - clones/apache__commons-beanutils/src
 
 - libraryId: joda-time
   startSha: "7fe68f297f7c372b515fde7f0bc8d721ec257ceb"
   endSha: "c377753444ba79cccc0c6c4806ba6fd0a800e629"
   url: "https://github.com/JodaOrg/joda-time"
-  gitDir: "/data/JodaOrg__joda-time/.git"
+  gitDir: "clones/JodaOrg__joda-time/.git"
   sourceRoots:
-  - /data/JodaOrg__joda-time/src/main/java
-  - /data/JodaOrg__joda-time/JodaTime/src/main/java
-  - /data/JodaOrg__joda-time/JodaTime/src/java
+  - clones/JodaOrg__joda-time/src/main/java
+  - clones/JodaOrg__joda-time/JodaTime/src/main/java
+  - clones/JodaOrg__joda-time/JodaTime/src/java
 
 - libraryId: gson
   startSha: "57d1f32de5bf3a7dd54613384cc7e979fba2660b"
   endSha: "1fa9b7a0a994b006b3be00e2df9de778e71e6807"
   url: "https://github.com/google/gson"
-  gitDir: "/data/google__gson/.git"
+  gitDir: "clones/google__gson/.git"
   sourceRoots:
-  - /data/google__gson/gson/src/main/java
+  - clones/google__gson/gson/src/main/java
 
 - libraryId: slf4j-api
   startSha: "239f8e13213d0f5f8a2323109e973596decf9e47"
   endSha: "d2073bece8310017914e1ff65d7107b2d4869c7d"
   url: "https://github.com/qos-ch/slf4j"
-  gitDir: "/data/qos-ch__slf4j/.git"
+  gitDir: "clones/qos-ch__slf4j/.git"
   sourceRoots:
-  - /data/qos-ch__slf4j/slf4j-api/src/main/java
-  - /data/qos-ch__slf4j/src/java
+  - clones/qos-ch__slf4j/slf4j-api/src/main/java
+  - clones/qos-ch__slf4j/src/java
 
 - libraryId: commons-logging
   startSha: "db6faedfe455c6c001af88d1721055ded1e962dd"
   endSha: "c1e206f816f4e210301c65ff3efeba7796424882"
   url: "https://github.com/apache/commons-logging"
-  gitDir: "/data/apache__commons-logging/.git"
+  gitDir: "clones/apache__commons-logging/.git"
   sourceRoots:
-  - /data/apache__commons-logging/src/main/java
-  - /data/apache__commons-logging/src/java
-  - /data/apache__commons-logging/src
+  - clones/apache__commons-logging/src/main/java
+  - clones/apache__commons-logging/src/java
+  - clones/apache__commons-logging/src

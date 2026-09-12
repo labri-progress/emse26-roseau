@@ -289,8 +289,8 @@ public class Benchmark {
 			var line = new StringBuilder();
 			var gt = resultsByTool.get("GroundTruth");
 			line.append(caseName);
-			line.append(";%b;%b;%s".formatted(gt.isBinaryBreaking(), gt.isSourceBreaking(), 
-				gt.message().replace(";", ",")));
+				line.append(";%b;%b;%s".formatted(gt.isBinaryBreaking(), gt.isSourceBreaking(),
+					csvField(gt.message())));
 			toolsWithPaths.forEach(toolWithPaths -> {
 				var toolName = toolWithPaths.tool().getName();
 				var details = resultsByTool.get(toolName);
@@ -309,7 +309,7 @@ public class Benchmark {
 					inputTokens, 
 					outputTokens, 
 					requestTime, 
-					message.replace(";", ",")));
+						csvField(message)));
 			});
 
 			try {
@@ -322,6 +322,10 @@ public class Benchmark {
 		});
 
 		writeToolSummaries(metricsByTool, toolsCsv);
+	}
+
+	private static String csvField(String value) {
+		return value.replace(';', ',').replace('\r', ' ').replace('\n', ' ');
 	}
 
 	private static void prepareCSV(Path casesCsv, List<ToolWithPaths> toolsWithPaths) {

@@ -9,7 +9,7 @@ measurement is wall-clock time. Expect the full corpus to take on the order of a
 ## Running
 
 ```bash
-uv run python measure_build_times.py --work-dir /data/tmp-build
+uv run python measure_build_times.py --work-dir tmp-build
 ```
 
 | Flag | Purpose |

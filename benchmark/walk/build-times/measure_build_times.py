@@ -1,24 +1,9 @@
-"""Measure the cost of building a JAR at every commit, for the RQ3 corpus.
+"""Measure build times for the longitudinal corpus in `walk.yaml`.
 
-The preliminary study of Section 5.3.3: for each library of the longitudinal
-corpus, check out its N latest commits and time a full compile-and-package run
-(Maven, Gradle, or ant as appropriate), without running any tests. The median
-per-commit build time is used by
-`results/longitudinal/walk/notebooks/build_times.ipynb` to extrapolate what a
-JAR-based tool such as japicmp or Revapi costs over a whole history.
-
-The corpus is read from `benchmark/walk/walk.yaml`.
-
-Output is a CSV with one row per build attempt, written by default to the path
-the notebook reads:
-
-    results/longitudinal/walk/notebooks/library-build-times.csv
-
-Builds run strictly sequentially: the measurement is wall-clock time, so
-overlapping builds would distort it.
+Writes one CSV row per build attempt for `build_times.ipynb`.
 
 Usage:
-    uv run python measure_build_times.py --work-dir /data/tmp-build
+    uv run python measure_build_times.py --work-dir tmp-build
     uv run python measure_build_times.py --repos google__guava --commits 10
     uv run python measure_build_times.py --summary-only
 """
@@ -44,7 +29,7 @@ DEFAULT_OUTPUT = (
     REPO_ROOT / "results" / "longitudinal" / "walk" / "notebooks" / "library-build-times.csv"
 )
 
-# Column order consumed by build_times.ipynb; do not reorder.
+# Consumed by build_times.ipynb; preserve column order.
 FIELDNAMES = [
     "timestamp_utc",
     "repo_name",
@@ -61,12 +46,11 @@ FIELDNAMES = [
     "message",
 ]
 
-# The only two outcomes the notebook accepts; timeouts and crashes are reported
-# as `build_failed` with an explanatory message.
+# The notebook recognizes these outcomes.
 OUTCOME_SUCCESS = "success"
 OUTCOME_FAILED = "build_failed"
 
-# Repositories measured on a branch other than the one `origin/HEAD` points at.
+# Non-default branches used for measurement.
 REF_OVERRIDES = {
     "FasterXML__jackson-core": "3.x",
     "FasterXML__jackson-databind": "3.x",
@@ -74,11 +58,11 @@ REF_OVERRIDES = {
     "square__retrofit": "trunk",
 }
 
-# Repositories where the auto-detected command does not produce a JAR.
+# Builds requiring repository-specific commands.
 BUILD_OVERRIDES = {
-    # guava-parent must be installed before the guava module resolves.
+    # Install the Guava parent before building its module.
     "google__guava": ("maven", ["sh", "./mvnw", "-B", "clean", "install", "-DskipTests"]),
-    # `assemble` builds every sample and adapter; only the library matters.
+    # Build only Retrofit's library module.
     "square__retrofit": ("gradle", ["sh", "./gradlew", "--no-daemon", "clean", ":retrofit:jar", "-x", "test"]),
     "testng-team__testng": (
         "gradle",
@@ -87,8 +71,7 @@ BUILD_OVERRIDES = {
     "projectlombok__lombok": ("ant", ["ant", "-noinput", "dist"]),
 }
 
-# Repositories needing toolchains beyond git, a JDK, Maven, Gradle, and ant.
-# They are attempted like any other unless --skip-difficult is passed.
+# Repositories requiring additional toolchains.
 KNOWN_DIFFICULT = {
     "protocolbuffers__protobuf",
     "mysql__mysql-connector-j",
@@ -123,7 +106,7 @@ def run_git(repo: Path, *args: str, check: bool = True) -> str:
 
 
 def load_corpus(config: Path) -> list[Repository]:
-    """Read the RQ3 corpus from walk.yaml, collapsing libraries that share a repo."""
+    """Load repositories from walk.yaml."""
     data = yaml.safe_load(config.read_text())
     by_name: dict[str, tuple[str, list[str]]] = {}
     for entry in data.get("repositories", []):
@@ -150,7 +133,7 @@ def ensure_clone(repo: Repository, work_dir: Path, depth: int | None) -> Path:
 
 
 def resolve_ref(repo: Repository, path: Path) -> str:
-    """Return the full remote-tracking ref this repository is measured on."""
+    """Return the remote ref to measure."""
     if override := REF_OVERRIDES.get(repo.name):
         return f"refs/remotes/origin/{override}"
 
@@ -164,7 +147,7 @@ def resolve_ref(repo: Repository, path: Path) -> str:
 
 
 def detect_build(repo: Repository, path: Path, m2_cache: Path) -> BuildSpec:
-    """Pick the build command, honouring per-repository overrides."""
+    """Choose the build command for the checked-out commit."""
     if override := BUILD_OVERRIDES.get(repo.name):
         tool, command = override
         if tool == "maven":
@@ -184,7 +167,7 @@ def detect_build(repo: Repository, path: Path, m2_cache: Path) -> BuildSpec:
 
 
 def latest_commits(path: Path, ref: str, count: int) -> list[tuple[str, str]]:
-    """Return the `count` newest commits of `ref`, newest first, as (sha, subject)."""
+    """Return newest-first (SHA, subject) pairs."""
     raw = run_git(path, "log", ref, f"--max-count={count}", "--format=%H%x1f%s")
     commits = []
     for line in raw.splitlines():
@@ -194,7 +177,7 @@ def latest_commits(path: Path, ref: str, count: int) -> list[tuple[str, str]]:
 
 
 def load_done(output: Path) -> set[tuple[str, str]]:
-    """(repo_name, commit) pairs already measured, so --resume never duplicates rows."""
+    """Return previously recorded (repository, commit) pairs."""
     if not output.is_file():
         return set()
     with output.open(newline="") as handle:
@@ -202,7 +185,7 @@ def load_done(output: Path) -> set[tuple[str, str]]:
 
 
 def build_once(path: Path, spec: BuildSpec, timeout: int) -> tuple[float, int, str, str]:
-    """Run one build, returning (elapsed_seconds, exit_code, outcome, message)."""
+    """Run one build and return elapsed time, status, outcome, and message."""
     started = time.perf_counter()
     try:
         result = subprocess.run(
@@ -247,7 +230,7 @@ def measure_repository(
             run_git(path, "checkout", "--quiet", "--detach", sha)
             if args.clean_worktree:
                 run_git(path, "clean", "-xdfq")
-            # Detected per commit: build files come and go over a history.
+            # Build files can change over a history.
             spec = detect_build(repo, path, m2_cache)
         except RuntimeError as error:
             log(f"  [{index:>3}/{len(commits)}] {sha[:10]} unbuildable: {error}")
@@ -278,7 +261,7 @@ def measure_repository(
 
 
 def print_summary(output: Path) -> None:
-    """Compile the per-library medians the notebook extrapolates from."""
+    """Print per-repository build-time summaries."""
     if not output.is_file():
         log(f"No results at {output}")
         return

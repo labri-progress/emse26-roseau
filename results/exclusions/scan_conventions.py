@@ -1,15 +1,5 @@
 #!/usr/bin/env python3
-"""Inventory Java annotations and package components in the walk corpus.
-
-The scanner reads ``walk.yaml`` and inspects every library at its configured
-``endSha`` (or its latest in-range source snapshot if the roots were removed).
-Files are streamed from the local Git clones, so their worktrees are never
-checked out or modified.
-
-Example:
-    uv run python results/exclusions/scan_conventions.py \
-        --clones-dir clones/roseau-0.7.0
-"""
+"""Inventory Java annotations and package components in the walk corpus."""
 
 from __future__ import annotations
 
@@ -29,7 +19,7 @@ import yaml
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_CONFIG = REPO_ROOT / "benchmark" / "walk" / "walk.yaml"
-DEFAULT_CLONES = REPO_ROOT / "clones" / "roseau-0.7.0"
+DEFAULT_CLONES = REPO_ROOT / "clones"
 DEFAULT_OUTPUT = Path(__file__).with_name("data")
 
 ANNOTATION_RE = re.compile(
@@ -55,7 +45,7 @@ def normalize_java_name(name: str) -> str:
 
 
 def strip_comments_and_literals(source: str) -> str:
-    """Replace comments and character/string contents while preserving lines."""
+    """Blank comments and literals while preserving line positions."""
     result = list(source)
     i = 0
     state = "code"
@@ -131,7 +121,7 @@ def repository_name(url: str) -> str:
 
 
 def minimize_roots(roots: Iterable[str]) -> tuple[str, ...]:
-    """Drop duplicate roots and children already covered by a parent root."""
+    """Remove roots covered by another root."""
     kept: list[PurePosixPath] = []
     for root in sorted({PurePosixPath(r) for r in roots}, key=lambda p: (len(p.parts), str(p))):
         if not any(root == parent or parent in root.parents for parent in kept):
@@ -178,7 +168,7 @@ def git_path_exists(clone: Path, revision: str, path: str) -> bool:
 
 
 def source_snapshot(library: Library) -> tuple[str, list[str]]:
-    """Use endSha, or the latest in-range snapshot before source-root removal."""
+    """Return endSha roots, or the last in-range snapshot containing them."""
     roots = [
         root
         for root in library.source_roots
